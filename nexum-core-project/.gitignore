@@ -1,0 +1,12 @@
+/.metadata/
+.settings
+.project
+nexum-core-project-webapp/.project
+nexum-core-project-webapp/.settings
+nexum-core-project-webapp/.classpath
+
+nexum-core-templating/.classpath
+nexum-core-templating/.settings
+nexum-core-templating/.project
+
+nexum-core-project-webapp/.mvn

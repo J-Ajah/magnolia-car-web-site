@@ -1,0 +1,68 @@
+# Automatically generated contentType demonstrates usage of the common properties.
+# Modify them to match your requirements.
+datasource:
+    workspace: news
+
+    # Optionally configure a custom namespace. (Replace [myNamespace] everywhere.)
+    # This namespace can then be used below for the nodetype.
+    # namespaces:
+#       mt: https://www.newsapp.com/jcr/1.0/mt
+    autoCreate: true
+
+model:
+    # Optionally supply a specific nodetype, otherwise 'mgnl:content' will be used.
+    nodeType: news
+    properties:
+    - name: author
+      label: Author
+      type: textField
+      placeholder: Author's name
+      required: true
+      i18n: true
+    - name: title
+      label: Title
+      type: textField
+      placeholder: title of News
+      i18n: true
+      required: true
+    - name: content
+      label: News content
+      type: richText
+      row: 5
+      i18n: true
+      required: true
+    - name: date
+      label: published Date
+      type: Date
+      required: true
+      i18n: true
+    - name: newsTag
+      label: News Tag
+      type: reference:newsTag
+      multiple: true
+      i18n: true
+      required: true
+    - name: tags
+      label: Tags
+      type: reference:tags
+      multiple: true
+      i18n: true
+    - name: categories
+      label: Categories
+      type: reference:category
+      multiple: true
+      i18n: true
+    - name: imageLink
+      label: Image
+      type: asset
+      multiple: true
+      required: false
+    - name: highlight
+      type: Boolean
+      label: Highlight
+      required: true
+      buttonLabel: highlight this news
+
+
+
+

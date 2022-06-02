@@ -1,0 +1,25 @@
+# Automatically generated contentType demonstrates usage of the common properties.
+# Modify them to match your requirements.
+datasource:
+  workspace: banner
+
+  # Optionally configure a custom namespace. (Replace [myNamespace] everywhere.)
+  # This namespace can then be used below for the nodetype.
+  # namespaces:
+  #       mt: https://www.newsapp.com/jcr/1.0/mt
+  autoCreate: true
+
+model:
+  # Optionally supply a specific nodetype, otherwise 'mgnl:content' will be used.
+  nodeType: banner
+  properties:
+    - name: Caption
+      label: Banner Caption
+      type: textField
+      placeholder: Banner Caption
+      required: true
+      i18n: true
+    - name: imageLink
+      label: Image
+      type: asset
+      required: false

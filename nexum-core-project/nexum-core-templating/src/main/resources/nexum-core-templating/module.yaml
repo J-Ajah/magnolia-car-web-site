@@ -1,0 +1,5 @@
+version: 6.2.17
+
+repository:
+  name: newsapp
+  nodeTypeFile: /mgnl-nodetypes/news-node-types.cnd

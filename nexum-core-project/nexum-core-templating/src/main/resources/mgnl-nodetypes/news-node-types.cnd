@@ -1,0 +1,12 @@
+<'mgnl' = 'http://www.magnolia.info/jcr/mgnl'>
+
+[mt:news] > mgnl:content
+ orderable
+
+[mt:pressRelease] > mgnl:content
+ orderable
+
+[mt:newsTag] > mgnl:content
+
+[mt:banner] > mgnl:content
+ orderable

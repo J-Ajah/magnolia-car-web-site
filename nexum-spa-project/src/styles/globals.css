@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .featured-news {
+        @apply md:w-[700px] w-full h-96 bg-white rounded-lg border-2 p-2 mb-3 cursor-pointer;
+    }
+    .other-featured-news{
+        @apply grid md:grid-cols-2 xl:grid-cols-2 grid-cols-1 ipad-pro:grid-cols-2 gap-x-4 gap-y-2 md:gap-y-0 p-2;
+    }
+    .featured-container{
+        @apply md:flex md:justify-center;
+    }
+    .other-featured-image{
+        @apply object-cover h-full md:h-44 w-full;
+    }
+    .main-feature-text{
+        @apply relative -top-[150px] text-white md:text-3xl ipad-pro:text-2xl ipad:text-lg mx-5;
+    }
+    .other-feature-text{
+        @apply relative -top-[50px] text-white text-sm mx-5 mb-0;
+    }
+    .news-header{
+        @apply h-14 bg-blue-700 flex md:justify-evenly justify-start items-center sticky top-0 overflow-y-auto;
+    }
+    .news-header-item{
+        @apply text-white cursor-pointer active:text-blue-700 px-5;
+    }
+}
+
+body {
+    margin: 0;
+}
+
+.press-description{
+    width: 100%;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow-wrap: break-word;
+}
+
+.name-badge{
+    padding: 2px 8px;
+    border-radius: 10px;
+}
+
+.date-badge{
+    padding: 2px 8px;
+    border-radius: 10px;
+}
+
+.headline {
+    font-weight: bold;
+    padding: 10px;
+}
+.navbar {
+    height: 5rem;
+    position: sticky;
+    position: -webkit-sticky;
+}
