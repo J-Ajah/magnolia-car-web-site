@@ -1,0 +1,10 @@
+title: Navbar
+
+areas:
+  logoArea:
+    title: Logo Area
+    availableComponents:
+      logo:
+        id: nexum-core-templating:components/common/logo
+      navLinks:
+        id: nexum-core-templating:components/common/navLinks

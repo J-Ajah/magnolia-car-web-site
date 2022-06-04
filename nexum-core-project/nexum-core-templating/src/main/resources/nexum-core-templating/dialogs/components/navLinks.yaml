@@ -1,0 +1,8 @@
+label: Navigation Links
+form:
+  properties:
+    navPagesLink:
+      label: Page Links
+      $type: textField
+      multiple: true
+      required: true

@@ -1,0 +1,7 @@
+label: Logo Image
+form:
+  properties:
+    image:
+      label: Logo Image
+      $type: damLinkField
+      required: true

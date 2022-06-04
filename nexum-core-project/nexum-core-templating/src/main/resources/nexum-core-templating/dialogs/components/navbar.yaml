@@ -1,0 +1,19 @@
+label: Navigation Details
+form:
+  properties:
+    navPagesLink:
+      label: Page Links
+      $type: textField
+      multiple: true
+      required: true
+  layout:
+    $type: tabbedLayout
+    tabs:
+      tab1:
+        label: Logo Image
+        fields:
+          - name: image
+      tab2:
+        label: Page Links
+        fields:
+          - name: navPagesLink

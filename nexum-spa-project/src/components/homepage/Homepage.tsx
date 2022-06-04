@@ -1,6 +1,8 @@
 import { EditableArea } from '@magnolia/react-editor'
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import {Navbar} from "@/components/common/Navbar"
+
 
 import { Layout } from '@/components/layouts/Layout'
 import type { AuthorPageProps } from '@/types/page-helper-types'
@@ -13,24 +15,16 @@ export const Homepage:NextPage<AuthorPageProps> = ({ title, metadata, ...props }
             <title>{title}</title>
             <meta name="description" content={title} />
           </Head>
-          <div className='border-2 border-[tomato]'>Hello</div>
-
+   
+         
          <Layout>
          <div className="Basic">
+         <section>
+               {props['navArea'] && <EditableArea key="Area" content={props['navArea'] } />}
+           </section>
+           {/* <Navbar /> */}
            <section>
                {props['main'] && <EditableArea key="Area" content={props['main'] } />}
-           </section>
-             <div className=""/>
-
-             <section>
-                 {props['news'] && <EditableArea key="Area" content={props['news'] } />}
-             </section>
-             <div className=""/>
-
-           <section className="Press">
-               <section>
-                   {props['press'] && <EditableArea key="Area" content={props['press'] } />}
-               </section>
            </section>
 
              <section className="Footer" >
