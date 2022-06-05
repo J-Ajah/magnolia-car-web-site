@@ -1,7 +1,9 @@
 // add components mappings in here
 import { Homepage } from "@/components/homepage/Homepage";
+import {Aboutpage} from "@/components/aboutpage/Aboutpage";
 import {Navbar} from "@/components/common/Navbar"
 import LogoImage from "@/components/common/LogoImage"
+import NavLinks from "@/components/common/NavLinks"
 
 
 export const config = {
@@ -9,6 +11,7 @@ export const config = {
     //components
     'nexum-core-templating:components/common/navbar': Navbar as React.FC,
     'nexum-core-templating:components/common/logo': LogoImage as React.FC,
+    'nexum-core-templating:components/common/navLinks': NavLinks as React.FC,
     // 'nexum-core-templating:components/common/banner': Banner as React.FC,
     // 'nexum-core-templating:components/common/footerArea': FooterArea as React.FC,
     // 'nexum-core-templating:components/common/footer/quick-links-area': QuickLinksArea as React.FC,
@@ -26,6 +29,7 @@ export const config = {
     // "nexum-core-templating:pages/news-page": NewsIndex as React.FC,
     // "nexum-core-templating:pages/press-release-page": PressIndex as React.FC,
     "nexum-core-templating:pages/home": Homepage as React.FC,
+    "nexum-core-templating:pages/about": Aboutpage as React.FC,
     // "nexum-core-templating:pages/news-detail": NewsDetails as React.FC,
     // 'nexum-core-templating:pages/single-press-page': SinglePressPage as React.FC
   },

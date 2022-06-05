@@ -24,8 +24,9 @@ const getAuthorPageData = async (path: string) => {
   if (path === "/") {
     newPath = path + "homepage";
   } else {
-    newPath = `/${path}`;
+    newPath = `${path}`;
   }
+ 
 
   // Fetches the page
   const pageContentResponse = await fetch(`${pagesApi}${newPath}`);
@@ -43,13 +44,18 @@ const getAuthorPageData = async (path: string) => {
 export const getStaticProps: GetStaticProps<AuthorProps> = async ({
   params,
 }) => {
-  let newParams: any;
-  let path: string | string[] = params.pathname;
+  let newParams: string;
+  let path: string | Object = params.pathname;
 
+  console.log(params);
   if (Object.keys(params).length === 0) {
     newParams = "/";
   } else {
-    newParams = path[0];
+    Object.entries(path).forEach(([key, value], index) => {
+      if (index === 0) newParams = "";
+      console.log("Value is: " + value);
+      newParams += "/" + value;
+    });
   }
 
   const { pageContent, templateAnnotations } = await getAuthorPageData(

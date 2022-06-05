@@ -8,3 +8,7 @@ areas:
         id: nexum-core-templating:components/common/logo
       navLinks:
         id: nexum-core-templating:components/common/navLinks
+  navLinksArea:
+    availableComponents:
+      pageNavLinks:
+        id: nexum-core-templating:components/common/navLinks

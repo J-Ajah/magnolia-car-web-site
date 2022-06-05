@@ -1,0 +1,24 @@
+title: About Page
+visibe: true
+baseUrl: http://localhost:3000
+routeTemplate: '/{language}{{@path}}'
+renderType: spa
+class: info.magnolia.rendering.spa.renderer.SpaRenderableDefinition
+
+dialog: nexum-core-templating:pages/about
+
+areas:
+  navArea:
+    title: Navigation Area
+    availableComponents:
+      Navbar:
+        id: nexum-core-templating:components/common/navbar
+  main:
+    title: Main Area
+    availableComponents:
+      Headline:
+        id: nexum-core-templating:components/common/headline
+      Papragraph:
+        id: nexum-core-templating:components/common/paragraph
+      Banner:
+        id: nexum-core-templating:components/common/banner
