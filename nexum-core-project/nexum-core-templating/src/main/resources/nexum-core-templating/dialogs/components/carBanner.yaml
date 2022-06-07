@@ -1,0 +1,84 @@
+label: Car Banner
+
+form:
+  properties:
+    image:
+      label: CarImage
+      $type: damLinkField
+      required: true
+      multiple: true
+    caption:
+      label: Banner Caption
+      $type: textField
+      required: true
+    description:
+      label: Banner Description
+      $type: textField
+      required: true
+    actionText:
+      label: Action Text
+      $type: textField
+      required: true
+
+    image2:
+      label: CarImage
+      $type: damLinkField
+      required: true
+    caption2:
+      label: Banner Caption
+      $type: textField
+      required: true
+    description2:
+      label: Banner Description
+      $type: textField
+      required: true
+    actionText2:
+      label: Action Text
+      $type: textField
+      required: true
+
+    image3:
+      label: CarImage
+      $type: damLinkField
+      required: true
+    caption3:
+      label: Banner Caption
+      $type: textField
+      required: true
+    description3:
+      label: Banner Description
+      $type: textField
+      required: true
+    actionText3:
+      label: Action Text
+      $type: textField
+      required: true
+
+  layout:
+    $type: tabbedLayout
+    tabs:
+      tab1:
+        label: Banner 1
+        fields:
+          - name: image
+          - name: caption
+          - name: description
+          - name: actionText
+      tab2:
+        label: Banner 2
+        fields:
+          - name: image2
+          - name: caption2
+          - name: description2
+          - name: actionText2
+      tab3:
+        label: Banner 3
+        fields:
+          - name: image3
+          - name: caption3
+          - name: description3
+          - name: actionText3
+
+
+
+

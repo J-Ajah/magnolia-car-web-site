@@ -18,7 +18,5 @@ areas:
     availableComponents:
       Headline:
         id: nexum-core-templating:components/common/headline
-      Papragraph:
-        id: nexum-core-templating:components/common/paragraph
       Banner:
-        id: nexum-core-templating:components/common/banner
+        id: nexum-core-templating:components/carBanner

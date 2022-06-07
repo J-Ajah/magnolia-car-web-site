@@ -5,5 +5,5 @@ module.exports = {
   eslint: {
     dirs: ['src'],
   },
-  images:{domains:["images.pexels.com", "localhost"]}
+  images:{domains:[ "localhost","images.pexels.com"]}
 }

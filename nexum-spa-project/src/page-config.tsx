@@ -4,7 +4,7 @@ import {Aboutpage} from "@/components/aboutpage/Aboutpage";
 import {Navbar} from "@/components/common/Navbar"
 import LogoImage from "@/components/common/LogoImage"
 import NavLinks from "@/components/common/NavLinks"
-
+import { Banner } from "./components/common/Banner";
 
 export const config = {
   componentMappings: {
@@ -12,6 +12,7 @@ export const config = {
     'nexum-core-templating:components/common/navbar': Navbar as React.FC,
     'nexum-core-templating:components/common/logo': LogoImage as React.FC,
     'nexum-core-templating:components/common/navLinks': NavLinks as React.FC,
+    'nexum-core-templating:components/carBanner': Banner as React.FC,
     // 'nexum-core-templating:components/common/banner': Banner as React.FC,
     // 'nexum-core-templating:components/common/footerArea': FooterArea as React.FC,
     // 'nexum-core-templating:components/common/footer/quick-links-area': QuickLinksArea as React.FC,

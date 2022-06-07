@@ -9,6 +9,7 @@ type Props = {
 const NavLinks: React.FC<Props> = ({ navPagesLink }) => {
   const route = useRouter();
 
+
   let path = route.asPath;
   let pagePath =
     navPagesLink.split("")[0].toLowerCase() +
@@ -23,10 +24,11 @@ const NavLinks: React.FC<Props> = ({ navPagesLink }) => {
     return current + " px-3 py-2 rounded-lg text-base font-medium";
   }
 
+  console.log(setCurrentPage(path))
 
 
   return (
-    <Link href="">
+    <Link href="homepage/about">
       <a className={classNames(setCurrentPage(path))}>{navPagesLink}</a>
     </Link>
   );

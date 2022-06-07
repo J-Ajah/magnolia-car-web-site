@@ -20,3 +20,18 @@ references:
     propertyName: image
     referenceResolver:
       class: info.magnolia.rest.reference.dam.AssetReferenceResolverDefinition
+
+  - name: assetReference
+    propertyName: image1
+    referenceResolver:
+      class: info.magnolia.rest.reference.dam.AssetReferenceResolverDefinition
+
+  - name: assetReference
+    propertyName: image2
+    referenceResolver:
+      class: info.magnolia.rest.reference.dam.AssetReferenceResolverDefinition
+
+  - name: assetReference
+    propertyName: image3
+    referenceResolver:
+      class: info.magnolia.rest.reference.dam.AssetReferenceResolverDefinition
