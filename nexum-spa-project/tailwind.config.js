@@ -8,9 +8,9 @@ module.exports = {
         md: "768px",
         lg: "976px",
         xl: "1440px",
+        xxl: "1910",
       },
     },
   },
-  plugins: [require("daisyui"),require("tailwindcss-textshadow"),],
-  
+  plugins: [require("daisyui"), require("tailwindcss-textshadow")],
 };
