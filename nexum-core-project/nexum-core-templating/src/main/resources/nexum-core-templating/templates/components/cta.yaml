@@ -1,0 +1,16 @@
+title:  CTA INFO
+visible: true
+
+
+areas:
+  detailsArea:
+    title: Details Area
+    availableComponents:
+      ctaDetails:
+        id: nexum-core-templating:components/ctaDetails
+
+  detailsArea1:
+    title: Details Area
+    availableComponents:
+      ctaDetails:
+        id: nexum-core-templating:components/ctaDetails

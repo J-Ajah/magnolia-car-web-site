@@ -5,6 +5,7 @@ import "animate.css";
 import { useEffect, useRef, useState } from "react";
 import { useIsMounted } from "@/utilities/PageUtilities";
 import { BannerAction } from "./BannerAction";
+import { EditableArea } from "@magnolia/react-editor";
 
 type Props = {
   data: sliderData;
@@ -23,12 +24,13 @@ type sliderData = {
   image: Object;
   image2: Object;
   image3: Object;
+  CTAArea?: {};
 };
 export const Carousel: React.FC<Props> = ({ data }) => {
   const [carouselIndex, setCarouselIndex] = useState(0);
   const isMounted = useIsMounted();
   const hostUrl = process.env["NEXT_PUBLIC_MGNL_HOST"];
-
+  console.log(data);
   const sliderData = [
     {
       caption: data.caption,
@@ -75,9 +77,6 @@ export const Carousel: React.FC<Props> = ({ data }) => {
     }, 9000);
   }, []);
 
-  console.log(`${hostUrl}${sliderData}`);
-  // console.log(`${hostUrl}${sliderData[carouselIndex].image["@link"]}`);
-  // const carImage = `${sliderData[carouselIndex].image["@link"]}`;
   return (
     <div>
       <div className="carousel w-full h-full">
@@ -109,7 +108,7 @@ export const Carousel: React.FC<Props> = ({ data }) => {
           </div>
         </div>
       </div>
-      <BannerAction/>
+      {data.CTAArea && <EditableArea key="CTAArea" content={data.CTAArea} />}
     </div>
   );
 };

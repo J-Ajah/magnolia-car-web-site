@@ -4,7 +4,10 @@ import {Aboutpage} from "@/components/aboutpage/Aboutpage";
 import {Navbar} from "@/components/common/Navbar"
 import LogoImage from "@/components/common/LogoImage"
 import NavLinks from "@/components/common/NavLinks"
-import { Banner } from "./components/common/Banner";
+import { Banner } from "./components/homepage/Banner";
+import { BannerAction } from "./components/homepage/BannerAction";
+import { CtaDetails } from "./components/homepage/CtaDetails";
+import { ctaImage } from "./components/homepage/ctaImage";
 
 export const config = {
   componentMappings: {
@@ -13,25 +16,14 @@ export const config = {
     'nexum-core-templating:components/common/logo': LogoImage as React.FC,
     'nexum-core-templating:components/common/navLinks': NavLinks as React.FC,
     'nexum-core-templating:components/carBanner': Banner as React.FC,
-    // 'nexum-core-templating:components/common/banner': Banner as React.FC,
-    // 'nexum-core-templating:components/common/footerArea': FooterArea as React.FC,
-    // 'nexum-core-templating:components/common/footer/quick-links-area': QuickLinksArea as React.FC,
-    // 'nexum-core-templating:components/news/news-card': NewsSection as React.FC,
-    // // 'nexum-core-templating:components/news/press-card': PressCard as React.FC,
-    // 'nexum-core-templating:components/common/footer/contact': Contact as React.FC,
-    // 'nexum-core-templating:components/common/footer/social-media-links': SocialMediaLinks as React.FC,
-    // 'nexum-core-templating:components/common/footer/links': Links as React.FC,
-    // 'nexum-core-templating:components/pressBanner': PressBanner as React.FC,
-    // 'nexum-core-templating:components/press/press-listing': PressReleaseList as React.FC,
-    // 'nexum-core-templating:components/press/press-highlights': PressReleaseHighlights as React.FC,
-
+    'nexum-core-templating:components/cta': BannerAction as React.FC,
+    'nexum-core-templating:components/ctaDetails': CtaDetails as React.FC,
+    'nexum-core-templating:components/ctaImages': ctaImage as React.FC,
 
     // // pages
-    // "nexum-core-templating:pages/news-page": NewsIndex as React.FC,
-    // "nexum-core-templating:pages/press-release-page": PressIndex as React.FC,
+
     "nexum-core-templating:pages/home": Homepage as React.FC,
     "nexum-core-templating:pages/about": Aboutpage as React.FC,
-    // "nexum-core-templating:pages/news-detail": NewsDetails as React.FC,
-    // 'nexum-core-templating:pages/single-press-page': SinglePressPage as React.FC
+
   },
 };

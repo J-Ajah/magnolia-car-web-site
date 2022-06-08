@@ -1,0 +1,13 @@
+label: CTA Details
+
+
+form:
+  properties:
+    ctaCaption:
+      $type: textField
+      label: Caption
+      required: true
+    ctaText:
+      $type: textField
+      label: Text
+      required: true

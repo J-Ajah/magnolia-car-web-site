@@ -1,3 +1,10 @@
 title:  Car Banner
 dialog: nexum-core-templating:components/carBanner
 visible: true
+
+areas:
+  CTAArea:
+    title: CTA INFO Area
+    availableComponents:
+      CTA:
+        id: nexum-core-templating:components/cta

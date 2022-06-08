@@ -35,3 +35,8 @@ references:
     propertyName: image3
     referenceResolver:
       class: info.magnolia.rest.reference.dam.AssetReferenceResolverDefinition
+
+  - name: assetReference
+    propertyName: ctaImage
+    referenceResolver:
+      class: info.magnolia.rest.reference.dam.AssetReferenceResolverDefinition

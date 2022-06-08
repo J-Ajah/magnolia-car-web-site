@@ -27,6 +27,10 @@
     .news-header-item{
         @apply text-white cursor-pointer active:text-blue-700 px-5;
     }
+
+    .carActions > div{
+         @apply md:w-[60%] lg:w-[70%]  relative;
+    }
 }
 
 body {

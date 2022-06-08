@@ -1,0 +1,10 @@
+title: CTA DETAILS
+dialog: nexum-core-templating:components/ctaDetails
+
+
+areas:
+  ImageArea:
+    title: Image Area
+    availableComponents:
+      ctaImages:
+        id: nexum-core-templating:components/ctaImages

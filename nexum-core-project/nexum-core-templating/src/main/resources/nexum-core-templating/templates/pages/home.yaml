@@ -16,7 +16,5 @@ areas:
   main:
     title: Main Area
     availableComponents:
-      Headline:
-        id: nexum-core-templating:components/common/headline
       Banner:
         id: nexum-core-templating:components/carBanner

@@ -1,0 +1,7 @@
+label: CTA Images
+form:
+  properties:
+    ctaImage:
+      label: Logo Image
+      $type: damLinkField
+      required: true
