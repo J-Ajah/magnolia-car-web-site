@@ -3,34 +3,24 @@
 @tailwind utilities;
 
 @layer components {
-    .featured-news {
-        @apply md:w-[700px] w-full h-96 bg-white rounded-lg border-2 p-2 mb-3 cursor-pointer;
-    }
-    .other-featured-news{
-        @apply grid md:grid-cols-2 xl:grid-cols-2 grid-cols-1 ipad-pro:grid-cols-2 gap-x-4 gap-y-2 md:gap-y-0 p-2;
-    }
-    .featured-container{
-        @apply md:flex md:justify-center;
-    }
-    .other-featured-image{
-        @apply object-cover h-full md:h-44 w-full;
-    }
-    .main-feature-text{
-        @apply relative -top-[150px] text-white md:text-3xl ipad-pro:text-2xl ipad:text-lg mx-5;
-    }
-    .other-feature-text{
-        @apply relative -top-[50px] text-white text-sm mx-5 mb-0;
-    }
-    .news-header{
-        @apply h-14 bg-blue-700 flex md:justify-evenly justify-start items-center sticky top-0 overflow-y-auto;
-    }
-    .news-header-item{
-        @apply text-white cursor-pointer active:text-blue-700 px-5;
-    }
 
     .carActions > div{
          @apply md:w-[60%] lg:w-[70%]  relative;
     }
+
+    /* .car-container > div{
+        @apply  md:flex;
+    } */
+
+  
+
+    .me > .mgnlEditorBar{
+        @apply w-[100%];
+    }
+
+    /* .me > div:last-child{
+        @apply md:w-[50%] border-2 border-[tomato];
+    } */ 
 }
 
 body {

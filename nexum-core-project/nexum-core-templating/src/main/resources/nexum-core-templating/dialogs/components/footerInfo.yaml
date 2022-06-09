@@ -1,0 +1,17 @@
+label: Footer Info
+
+
+form:
+  properties:
+    serviceSum:
+      label: Services Summary
+      $type: textField
+      required: true
+    location:
+      label: Location
+      $type: textField
+      required: true
+    email:
+      label: Email
+      $type: textField
+      required: true

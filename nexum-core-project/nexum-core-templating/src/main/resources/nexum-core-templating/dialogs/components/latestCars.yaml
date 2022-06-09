@@ -1,0 +1,8 @@
+label: Latest Cars
+
+form:
+  properties:
+    name:
+      $type: textField
+      label: Title
+      required: true

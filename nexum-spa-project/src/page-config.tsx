@@ -8,6 +8,9 @@ import { Banner } from "./components/homepage/Banner";
 import { BannerAction } from "./components/homepage/BannerAction";
 import { CtaDetails } from "./components/homepage/CtaDetails";
 import { ctaImage } from "./components/homepage/ctaImage";
+import {LatestCar} from "./components/homepage/LatestCar";
+import { CarListing } from "./components/homepage/CarListing";
+import {Cars} from  "./components/homepage/Cars"
 
 export const config = {
   componentMappings: {
@@ -19,6 +22,9 @@ export const config = {
     'nexum-core-templating:components/cta': BannerAction as React.FC,
     'nexum-core-templating:components/ctaDetails': CtaDetails as React.FC,
     'nexum-core-templating:components/ctaImages': ctaImage as React.FC,
+    'nexum-core-templating:components/latestCars': LatestCar as React.FC,
+    'nexum-core-templating:components/carListing': CarListing as React.FC,
+    'nexum-core-templating:components/carInfo': Cars as React.FC,
 
     // // pages
 

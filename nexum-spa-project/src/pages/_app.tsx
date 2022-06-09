@@ -1,16 +1,15 @@
 import React from "react";
-import '@/styles/globals.css';
+import "@/styles/globals.css";
 
-import { config } from '@fortawesome/fontawesome-svg-core'
+import { config } from "@fortawesome/fontawesome-svg-core";
 // import '@fortawesome/fontawesome-svg-core/styles.css'
 // import { Header } from '@/components/common/Header'
 
-
-import type { AppProps } from 'next/app'
+import type { AppProps } from "next/app";
 // font awesome config
-config.autoAddCss = false
+config.autoAddCss = false;
 export default function MyApp({ Component, pageProps }: AppProps) {
-    return (
+  return (
     <>
       <Component {...pageProps} />
 
@@ -18,13 +17,13 @@ export default function MyApp({ Component, pageProps }: AppProps) {
       {/* footer  */}
       {/*<Footer/>*/}
     </>
-  )
+  );
 }
 
-export async function getServerSideProps(context:any) {
-    return {
-        props: {
-            results: context,
-        },
-    };
+export async function getServerSideProps(context: any) {
+  return {
+    props: {
+      results: context,
+    },
+  };
 }

@@ -1,0 +1,13 @@
+label: Footer Links
+
+form:
+  properties:
+    caption:
+      label: Caption
+      $type: textField
+      required: true
+    pages:
+      label: Pages
+      $type: textField
+      required: true
+      multiple: true

@@ -6,7 +6,7 @@ import { EditableArea } from "@magnolia/react-editor";
 
 type Props = {};
 export const BannerAction: React.FC<Props> = (props) => {
-  console.log("===============", props);
+
   return (
     <div className="md:flex lg:justify-center">
       <div

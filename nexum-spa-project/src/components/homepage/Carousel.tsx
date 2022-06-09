@@ -30,7 +30,7 @@ export const Carousel: React.FC<Props> = ({ data }) => {
   const [carouselIndex, setCarouselIndex] = useState(0);
   const isMounted = useIsMounted();
   const hostUrl = process.env["NEXT_PUBLIC_MGNL_HOST"];
-  console.log(data);
+
   const sliderData = [
     {
       caption: data.caption,

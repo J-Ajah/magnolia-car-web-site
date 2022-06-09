@@ -18,3 +18,14 @@ areas:
     availableComponents:
       Banner:
         id: nexum-core-templating:components/carBanner
+      latestCars:
+        id: nexum-core-templating:components/latestCars
+      carListing:
+        id: nexum-core-templating:components/carListing
+
+
+  footer:
+    title: Footer Area
+    availableComponents:
+      footer:
+        id: nexum-core-templating:components/footer

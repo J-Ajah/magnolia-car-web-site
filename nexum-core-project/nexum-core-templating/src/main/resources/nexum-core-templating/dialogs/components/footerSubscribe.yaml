@@ -1,0 +1,12 @@
+label: Footer Subscribe
+
+form:
+  properties:
+    caption:
+      label: Caption
+      $type: textField
+      required: true
+    details:
+      label: Details
+      $type: textField
+      required: true

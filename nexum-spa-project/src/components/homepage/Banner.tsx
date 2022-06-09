@@ -16,7 +16,7 @@ type Props = {
 };
 
 export const Banner: React.FC<Props> = (props) => {
-  console.log("Banner props", props);
+
 
   return (
     <>

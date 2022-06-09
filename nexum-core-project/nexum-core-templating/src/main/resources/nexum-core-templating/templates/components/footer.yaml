@@ -1,0 +1,15 @@
+title: Footer Area
+visible: true
+
+areas:
+  footerArea:
+    title: Footer Section
+    availableComponents:
+      footerInfo:
+        id: nexum-core-templating:components/footerInfo
+      footerLinks:
+        id: nexum-core-templating:components/footerLinks
+      footerPosts:
+        id: nexum-core-templating:components/footerPosts
+      subscribe:
+        id: nexum-core-templating:components/subscribe

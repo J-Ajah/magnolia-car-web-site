@@ -1,0 +1,9 @@
+title: Car Listing
+visible: true
+
+areas:
+  carsListingArea:
+    title: Car Listing Area
+    availableComponents:
+      carInfo:
+        id: nexum-core-templating:components/carInfo

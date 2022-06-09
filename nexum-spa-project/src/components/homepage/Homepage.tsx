@@ -7,6 +7,7 @@ import {Navbar} from "@/components/common/Navbar"
 import { Layout } from '@/components/layouts/Layout'
 import type { AuthorPageProps } from '@/types/page-helper-types'
 import { Carousel } from './Carousel'
+import { LatestCar } from './LatestCar'
 
 export const Homepage:NextPage<AuthorPageProps> = ({ title, metadata, ...props }) => {
     console.log('props', props)

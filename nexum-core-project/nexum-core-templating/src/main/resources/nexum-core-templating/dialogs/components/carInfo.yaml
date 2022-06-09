@@ -1,0 +1,16 @@
+label: Car Listing
+
+form:
+  properties:
+    carName:
+      label: Car Name
+      $type: textField
+      required: true
+    carDescription:
+      label: Car Description
+      $type: richTextField
+      required: true
+    carImage:
+      label: Car Images
+      $type: damLinkField
+      required: true
