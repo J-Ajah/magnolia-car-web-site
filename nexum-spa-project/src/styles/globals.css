@@ -14,7 +14,10 @@
 
   
 
-    .me > .mgnlEditorBar{
+    .me > .mgnlEditor{
+        @apply w-[100%];
+    }
+    .footerArea > .mgnlEditor{
         @apply w-[100%];
     }
 

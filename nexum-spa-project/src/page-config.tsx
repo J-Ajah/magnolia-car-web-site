@@ -11,6 +11,8 @@ import { ctaImage } from "./components/homepage/ctaImage";
 import {LatestCar} from "./components/homepage/LatestCar";
 import { CarListing } from "./components/homepage/CarListing";
 import {Cars} from  "./components/homepage/Cars"
+import Footer from "./components/common/Footer";
+import { FooterInformation } from "./components/common/footerInformation";
 
 export const config = {
   componentMappings: {
@@ -25,6 +27,8 @@ export const config = {
     'nexum-core-templating:components/latestCars': LatestCar as React.FC,
     'nexum-core-templating:components/carListing': CarListing as React.FC,
     'nexum-core-templating:components/carInfo': Cars as React.FC,
+    'nexum-core-templating:components/footer': Footer as React.FC,
+    'nexum-core-templating:components/footerInfo': FooterInformation as React.FC,
 
     // // pages
 

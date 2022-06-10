@@ -4,7 +4,7 @@ import { AiOutlineCar } from "react-icons/ai";
 import { CgKeyhole } from "react-icons/cg";
 import { EditableArea } from "@magnolia/react-editor";
 
-type Props = {};
+type Props = {};  
 export const BannerAction: React.FC<Props> = (props) => {
 
   return (
