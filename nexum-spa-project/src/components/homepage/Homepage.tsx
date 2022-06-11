@@ -8,6 +8,9 @@ import { Layout } from "@/components/layouts/Layout";
 import type { AuthorPageProps } from "@/types/page-helper-types";
 import { Carousel } from "./Carousel";
 import { LatestCar } from "./LatestCar";
+import { LinkDetails } from "../common/LinkDetails";
+import { FooterPosts } from "../common/FooterPosts";
+import { FooterSubscribe } from "../common/FooterSubscribe";
 
 export const Homepage: NextPage<AuthorPageProps> = ({
   title,
@@ -36,18 +39,21 @@ export const Homepage: NextPage<AuthorPageProps> = ({
             )}
           </section>
 
-          <section className="Footer mt-20 relative h-[600px] bg-[rgba(0,0,0)]">
+          <section className="Footer mt-20 relative  bg-[rgba(0,0,0,0.9)] ">
             {props["footer"] && (
               <EditableArea
-                className="footerArea flex flex-wrap"
+                className=""
                 key="Area"
                 content={props["footer"]}
               />
             )}
             <img
-              className="absolute w-full object-cover opacity-10 h-[400px]"
+              className="absolute w-full  object-cover lg:h-[366px] top-0  opacity-5"
               src={car1.src}
             />
+            {/* <LinkDetails/>
+            <FooterPosts/>
+            <FooterSubscribe/> */}
           </section>
         </div>
       </Layout>

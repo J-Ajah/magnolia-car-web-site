@@ -17,8 +17,27 @@
     .me > .mgnlEditor{
         @apply w-[100%];
     }
+
+    /* Footer Area Magnolia Styling */
     .footerArea > .mgnlEditor{
-        @apply w-[100%];
+        @apply w-[100%] ;
+    }
+
+    .footerArea  .mgnlEditor{
+        grid-column: 1 / -1;
+    }
+    /* .footerArea :nth-last-child(2){
+        grid-column: 1 / -1;
+    }
+    .footerArea:last-child{
+        grid-column: 1 / -1;
+    } */
+      /* Footer Area Magnolia Styling ends here*/
+
+      
+    /* Text caption style */
+    .caption{
+        @apply lg:text-lg
     }
 
     /* .me > div:last-child{

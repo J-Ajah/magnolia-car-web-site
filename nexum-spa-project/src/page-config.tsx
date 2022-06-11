@@ -13,6 +13,9 @@ import { CarListing } from "./components/homepage/CarListing";
 import {Cars} from  "./components/homepage/Cars"
 import Footer from "./components/common/Footer";
 import { FooterInformation } from "./components/common/footerInformation";
+import { LinkDetails } from "./components/common/LinkDetails";
+import { FooterPosts } from "./components/common/FooterPosts";
+import { FooterSubscribe } from "./components/common/FooterSubscribe";
 
 export const config = {
   componentMappings: {
@@ -29,6 +32,9 @@ export const config = {
     'nexum-core-templating:components/carInfo': Cars as React.FC,
     'nexum-core-templating:components/footer': Footer as React.FC,
     'nexum-core-templating:components/footerInfo': FooterInformation as React.FC,
+    'nexum-core-templating:components/footerLinks': LinkDetails as React.FC,
+    'nexum-core-templating:components/footerPosts': FooterPosts as React.FC,
+    'nexum-core-templating:components/subscribe': FooterSubscribe as React.FC,
 
     // // pages
 

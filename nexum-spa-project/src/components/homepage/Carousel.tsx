@@ -1,11 +1,10 @@
 import car1 from "@/assets/car1.jpg";
 import car from "@/assets/car3.jpg";
-import Image from "next/image";
 import "animate.css";
 import { useEffect, useRef, useState } from "react";
 import { useIsMounted } from "@/utilities/PageUtilities";
-import { BannerAction } from "./BannerAction";
 import { EditableArea } from "@magnolia/react-editor";
+import { Button } from "@/components/common/Button";
 
 type Props = {
   data: sliderData;
@@ -101,9 +100,10 @@ export const Carousel: React.FC<Props> = ({ data }) => {
               <p className="text-[#fffdfd] font-normal text-[15px] mt-2 lg:text-[18px]">
                 {sliderData[carouselIndex].description}
               </p>
-              <button className="btn !border-0 btn-sm mt-5 lg:mt-10  !bg-[#d6293a]  hover:text-[white] hover:scale-105 lg:btn lg:hover:bg-[#d6293a] lg:rounded-0">
+              {/* <button className="btn !border-0 btn-sm mt-5 lg:mt-10  !bg-[#d6293a]  hover:text-[white] hover:scale-105 lg:btn lg:hover:bg-[#d6293a] lg:rounded-0">
                 {sliderData[carouselIndex].buttonText}
-              </button>
+              </button> */}
+              <Button text={sliderData[carouselIndex].buttonText} />
             </div>
           </div>
         </div>

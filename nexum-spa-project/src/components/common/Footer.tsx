@@ -6,7 +6,7 @@ const Footer: React.FC = (props: Props) => {
     <>
       {props["footerArea"] && (
         <EditableArea
-          className="footerArea"
+          className="footerArea md:grid md:grid-cols-2 gap-2 lg:grid-cols-3 xl:grid-cols-4"
           key="footerArea"
           content={props["footerArea"]}
         />
