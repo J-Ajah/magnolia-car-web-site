@@ -12,10 +12,12 @@ import {LatestCar} from "./components/homepage/LatestCar";
 import { CarListing } from "./components/homepage/CarListing";
 import {Cars} from  "./components/homepage/Cars"
 import Footer from "./components/common/Footer";
-import { FooterInformation } from "./components/common/footerInformation";
+import { FooterInformation } from "./components/common/FooterInformation";
 import { LinkDetails } from "./components/common/LinkDetails";
 import { FooterPosts } from "./components/common/FooterPosts";
 import { FooterSubscribe } from "./components/common/FooterSubscribe";
+import Posts from "./components/common/Posts";
+// import FooterCopyright from "./components/common/FooterCopyright";
 
 export const config = {
   componentMappings: {
@@ -35,6 +37,7 @@ export const config = {
     'nexum-core-templating:components/footerLinks': LinkDetails as React.FC,
     'nexum-core-templating:components/footerPosts': FooterPosts as React.FC,
     'nexum-core-templating:components/subscribe': FooterSubscribe as React.FC,
+    'nexum-core-templating:components/post': Posts as React.FC,
 
     // // pages
 

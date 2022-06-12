@@ -1,0 +1,16 @@
+label: Post
+
+form:
+  properties:
+    title:
+      label: Title
+      $type: textField
+      required: true
+    carImage:
+      label: Car Image
+      $type: damLinkField
+      required: true
+    day:
+      label: Date
+      $type: dateField
+      required: true

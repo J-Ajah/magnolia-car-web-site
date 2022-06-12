@@ -5,12 +5,16 @@ visible: true
 areas:
   detailsArea:
     title: Details Area
+    maxComponents: 1
+    $type: list
     availableComponents:
       ctaDetails:
         id: nexum-core-templating:components/ctaDetails
 
   detailsArea1:
     title: Details Area
+    maxComponents: 1
+    $type: list
     availableComponents:
       ctaDetails:
         id: nexum-core-templating:components/ctaDetails

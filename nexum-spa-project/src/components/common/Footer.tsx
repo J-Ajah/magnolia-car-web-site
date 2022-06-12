@@ -1,4 +1,5 @@
 import { EditableArea } from "@magnolia/react-editor";
+import FooterCopyright from "./FooterCopyright";
 
 type Props = {};
 const Footer: React.FC = (props: Props) => {
@@ -10,6 +11,16 @@ const Footer: React.FC = (props: Props) => {
           key="footerArea"
           content={props["footerArea"]}
         />
+      )}
+
+      {/* Copyright Area  */}
+      {props["rightArea"] && (
+        // <EditableArea
+        //   className="rightArea"
+        //   key="footerArea"
+        //   content={props["rightArea"]}
+        // />
+        <FooterCopyright />
       )}
     </>
   );

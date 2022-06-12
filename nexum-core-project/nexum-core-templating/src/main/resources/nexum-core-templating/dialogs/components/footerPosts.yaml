@@ -6,15 +6,3 @@ form:
       label: Caption
       $type: textField
       required: true
-    carImage:
-      label: Car Image
-      $type: damLinkField
-      required: true
-    title:
-      label: Title
-      $type: textField
-      required: true
-    day:
-      label: Date
-      $type: Date
-      required: true

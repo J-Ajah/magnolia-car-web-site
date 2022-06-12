@@ -6,8 +6,15 @@ form:
       label: Caption
       $type: textField
       required: true
-    pages:
+    link1:
       label: Pages
       $type: textField
       required: true
-      multiple: true
+    link2:
+      label: Pages
+      $type: textField
+      required: true
+    link3:
+      label: Pages
+      $type: textField
+      required: true

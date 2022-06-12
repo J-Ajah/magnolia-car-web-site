@@ -1,9 +1,10 @@
-title: Footer Area
+title: Footer Area Section
 visible: true
 
 areas:
   footerArea:
     title: Footer Section
+    maxComponents: 4
     availableComponents:
       footerInfo:
         id: nexum-core-templating:components/footerInfo
@@ -13,3 +14,10 @@ areas:
         id: nexum-core-templating:components/footerPosts
       subscribe:
         id: nexum-core-templating:components/subscribe
+
+
+  rightArea:
+    title: Copyright Area
+    availableComponents:
+      copyRightSection:
+        id: nexum-core-templating:components/footerCopyright

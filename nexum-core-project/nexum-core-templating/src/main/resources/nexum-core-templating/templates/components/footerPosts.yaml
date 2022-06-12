@@ -1,3 +1,13 @@
 title: Footer Posts
-dialog:  nexum-core-templating:components/footerPosts
+dialog: nexum-core-templating:components/footerPosts
 visible: true
+
+
+areas:
+  Posts Area:
+    title: Posts Section
+    maxComponents: 3
+    availableComponents:
+      post:
+        id: nexum-core-templating:components/post
+

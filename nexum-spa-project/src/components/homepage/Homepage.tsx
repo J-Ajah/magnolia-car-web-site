@@ -41,19 +41,12 @@ export const Homepage: NextPage<AuthorPageProps> = ({
 
           <section className="Footer mt-20 relative  bg-[rgba(0,0,0,0.9)] ">
             {props["footer"] && (
-              <EditableArea
-                className=""
-                key="Area"
-                content={props["footer"]}
-              />
+              <EditableArea className="pt-1" key="Area" content={props["footer"]} />
             )}
             <img
               className="absolute w-full  object-cover lg:h-[366px] top-0  opacity-5"
               src={car1.src}
             />
-            {/* <LinkDetails/>
-            <FooterPosts/>
-            <FooterSubscribe/> */}
           </section>
         </div>
       </Layout>
