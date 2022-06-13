@@ -1,5 +1,4 @@
-import car1 from "@/assets/car1.jpg";
-import car from "@/assets/car3.jpg";
+
 import "animate.css";
 import { useEffect, useRef, useState } from "react";
 import { useIsMounted } from "@/utilities/PageUtilities";
@@ -51,7 +50,7 @@ export const Carousel: React.FC<Props> = ({ data }) => {
     },
   ];
 
-  const staticImage = [car1, car, car1];
+ 
 
   const sliderLength = sliderData.length;
   let count = useRef(0);

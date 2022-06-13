@@ -1,8 +1,19 @@
 import { EditableArea } from "@magnolia/react-editor";
 import FooterCopyright from "./FooterCopyright";
 
-type Props = {};
-const Footer: React.FC = (props: Props) => {
+type Props = {
+  facebookImg: {};
+  facebookLink: string;
+  instagramImg: {};
+  instagramLink: string;
+  twitterImg: {};
+  twitterLink: string;
+  policyLink: string;
+  termsLink: string;
+};
+
+const Footer: React.FC<Props> = (props: Props) => {
+  console.log(props);
   return (
     <>
       {props["footerArea"] && (
@@ -14,14 +25,22 @@ const Footer: React.FC = (props: Props) => {
       )}
 
       {/* Copyright Area  */}
-      {props["rightArea"] && (
-        // <EditableArea
-        //   className="rightArea"
-        //   key="footerArea"
-        //   content={props["rightArea"]}
-        // />
-        <FooterCopyright />
-      )}
+      {props["rightArea"] && <FooterCopyright data={props} />}
+
+      <img
+        className="absolute top-[70%] right-10 z-50 cursor-pointer 
+      hover:scale-150 hover:tansition hover:duration-500
+      lg:w-[35px]
+      "
+        src="/img/scrollToTop.svg"
+        alt="scroll to top"
+        onClick={() => {
+          window.scrollTo({
+            top: 0,
+            behavior:"smooth"
+          });
+        }}
+      />
     </>
   );
 };

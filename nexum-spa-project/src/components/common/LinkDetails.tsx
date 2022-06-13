@@ -3,9 +3,9 @@ import { MdDoubleArrow } from "react-icons/md";
 type Props = {};
 
 export const LinkDetails: React.FC<Props> = (props) => {
-  console.log("Useful Links section is logging here", props);
+  console.log("Value of props is: ",props)
   return (
-    <div className="text-white w-[80%] mx-auto mt-14 ml-12 xl:flex xl:flex-wrap  xl:flex-start
+    <div className="relative z-50 text-white w-[80%] mx-auto mt-14 ml-12 xl:flex xl:flex-wrap  xl:flex-start
     xl:align-top justify-evenly xl:content-start ">
       <div className="xl:w-[80%] h-fit">
         <p className="caption w-[50%]">USEFUL LINKS</p>

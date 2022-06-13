@@ -45,3 +45,17 @@ references:
     propertyName: carImage
     referenceResolver:
       class: info.magnolia.rest.reference.dam.AssetReferenceResolverDefinition
+
+#  Social Icon dam resolvers
+  - name: assetReference
+    propertyName: facebookImg
+    referenceResolver:
+      class: info.magnolia.rest.reference.dam.AssetReferenceResolverDefinition
+  - name: assetReference
+    propertyName: twitterImg
+    referenceResolver:
+      class: info.magnolia.rest.reference.dam.AssetReferenceResolverDefinition
+  - name: assetReference
+    propertyName: instagramImg
+    referenceResolver:
+      class: info.magnolia.rest.reference.dam.AssetReferenceResolverDefinition

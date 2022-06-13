@@ -5,7 +5,6 @@ type Props = {
 };
 
 export const CarListing: React.FC<Props> = ({ carsListingArea }) => {
-    console.log("Car listing Props is:",carsListingArea)
   return (
     <div className="car-container md:flex md:flex-wrap">
      

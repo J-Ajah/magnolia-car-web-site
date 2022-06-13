@@ -10,7 +10,7 @@ type Props ={
 
 export const FooterPosts:React.FC<Props> = (props: Props) => {
   return (
-    <div className="text-white w-[80%] mx-auto mt-14 ml-12">
+    <div className="relative z-50 text-white w-[80%] mx-auto mt-14 ml-12">
       <div>
         <p className="caption w-[50%]">{props.caption}</p>
         <div

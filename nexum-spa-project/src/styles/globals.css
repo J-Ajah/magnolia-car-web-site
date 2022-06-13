@@ -3,55 +3,54 @@
 @tailwind utilities;
 
 @layer components {
+  .carActions > div {
+    @apply md:w-[60%] lg:w-[70%]  relative;
+  }
 
-    .carActions > div{
-         @apply md:w-[60%] lg:w-[70%]  relative;
-    }
-
-    /* .car-container > div{
+  /* .car-container > div{
         @apply  md:flex;
     } */
 
-  
+  .me > .mgnlEditor {
+    @apply w-[100%];
+  }
 
-    .me > .mgnlEditor{
-        @apply w-[100%];
-    }
+  /* Footer Area Magnolia Styling */
+  .footerArea > .mgnlEditor {
+    @apply w-[100%];
+  }
 
-    /* Footer Area Magnolia Styling */
-    .footerArea > .mgnlEditor{
-        @apply w-[100%] ;
-    }
-    
-    .footerArea  .mgnlEditor{
-        grid-column: 1 / -1;
-    }
-    .rightArea > .mgnlEditor{
-        @apply w-[100%] ;
-    }
-    
+  .footerArea .mgnlEditor {
+    grid-column: 1 / -1;
+  }
+  .rightArea > .mgnlEditor {
+    @apply w-[100%];
+  }
 
-      
-    /* Text caption style */
-    .caption{
-        @apply lg:text-lg
-    }
-
-    /* .me > div:last-child{
-        @apply md:w-[50%] border-2 border-[tomato];
-    } */ 
+  /* Text caption style */
+  .caption {
+    @apply lg:text-lg;
+  }
 }
 
 body {
-    margin: 0;
+  margin: 0;
 }
 
-/* div .mgnlEditorBar{
-    width:100%;
-} */
-
-/* .nav-links > :first-child{
-    border: solid 1px tomato;
-    display: flex;
-    flex-wrap: wrap;
-} */
+.Footer {
+  position: relative;
+  background-image: url(/img/car1.jpg);
+  background-size: cover;
+  background-color: rgba(0, 0, 0);
+  background-repeat: no-repeat;
+}
+.Footer::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 1;
+}

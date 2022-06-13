@@ -4,7 +4,7 @@ import { Button } from "./Button";
 
 export const FooterSubscribe = () => {
   return (
-    <div className="text-white w-[80%] mx-auto mt-14 ml-12 pb-10">
+    <div className="relative z-50 text-white w-[80%] mx-auto mt-14 ml-12 pb-10">
       <div>
         <p className="caption w-[60%]">SUBSCRIBE TO OUR NEWS LETTER</p>
         <div
