@@ -10,7 +10,23 @@ export const setCurrentPage = (path): string => {
       path = "about";
       break;
     case "/contact":
-      path = "contact us";
+      path = "contact";
+      break;
+    case "/homepage/contact":
+      path = "contact";
+      break;
+    case "/showroom":
+      path = "showroom";
+      break;
+    case "/homepage/showroom":
+      path = "showroom";
+      break;
+    case "/services":
+      path = "services";
+      break;
+    case "/homepage/services":
+      path = "services";
+      break;
     default:
       path = "/";
   }

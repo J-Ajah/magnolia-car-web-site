@@ -24,9 +24,11 @@ const getAuthorPageData = async (path: string) => {
   if (path === "/") {
     newPath = path + "homepage";
   } else {
-    newPath = `${path}`;
+    // Checks and appends the homepage path to the current path
+    if (!newPath.includes("homepage")) {
+      newPath = `/homepage${path}`;
+    }
   }
- 
 
   // Fetches the page
   const pageContentResponse = await fetch(`${pagesApi}${newPath}`);

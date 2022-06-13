@@ -1,15 +1,18 @@
-
 import "animate.css";
 import { useEffect, useRef, useState } from "react";
 import { useIsMounted } from "@/utilities/PageUtilities";
 import { EditableArea } from "@magnolia/react-editor";
 import { Button } from "@/components/common/Button";
+import Link from "next/link";
 
 type Props = {
   data: sliderData;
 };
 
 type sliderData = {
+  linkPath: string;
+  linkPath2: string;
+  linkPath3: string;
   actionText: string;
   actionText2: string;
   actionText3: string;
@@ -25,6 +28,7 @@ type sliderData = {
   CTAArea?: {};
 };
 export const Carousel: React.FC<Props> = ({ data }) => {
+  console.log(data);
   const [carouselIndex, setCarouselIndex] = useState(0);
   const isMounted = useIsMounted();
   const hostUrl = process.env["NEXT_PUBLIC_MGNL_HOST"];
@@ -35,22 +39,23 @@ export const Carousel: React.FC<Props> = ({ data }) => {
       description: data.description,
       buttonText: data.actionText,
       image: data.image,
+      path: data.linkPath,
     },
     {
       caption: data.caption2,
       description: data.description2,
       buttonText: data.actionText2,
       image: data.image2,
+      path: data.linkPath2,
     },
     {
       caption: data.caption3,
       description: data.description3,
       buttonText: data.actionText3,
       image: data.image3,
+      path: data.linkPath3,
     },
   ];
-
- 
 
   const sliderLength = sliderData.length;
   let count = useRef(0);
@@ -102,7 +107,12 @@ export const Carousel: React.FC<Props> = ({ data }) => {
               {/* <button className="btn !border-0 btn-sm mt-5 lg:mt-10  !bg-[#d6293a]  hover:text-[white] hover:scale-105 lg:btn lg:hover:bg-[#d6293a] lg:rounded-0">
                 {sliderData[carouselIndex].buttonText}
               </button> */}
-              <Button text={sliderData[carouselIndex].buttonText} />
+
+              <Link href={sliderData[carouselIndex].path}>
+                <a>
+                  <Button text={sliderData[carouselIndex].buttonText} />
+                </a>
+              </Link>
             </div>
           </div>
         </div>

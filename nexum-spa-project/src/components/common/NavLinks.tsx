@@ -1,38 +1,38 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import  {setCurrentPage} from "@/utilities/PageUtilities"
+import { setCurrentPage } from "@/utilities/PageUtilities";
 
 type Props = {
   readonly navPagesLink: string;
+  readonly linkedPage: string;
 };
 
-const NavLinks: React.FC<Props> = ({ navPagesLink }) => {
+const NavLinks: React.FC<Props> = (props) => {
   const route = useRouter();
-
+  console.log("I just logged this: ", props);
 
   let path = route.asPath;
   let pagePath =
-    navPagesLink.split("")[0].toLowerCase() +
-    navPagesLink.slice(1, navPagesLink.length);
+    props.navPagesLink.split("")[0].toLowerCase() +
+    props.navPagesLink.slice(1, props.navPagesLink.length);
 
-  function classNames(path: string) {
+  function classNames(currentPath: string) {
+    console.log("Current path is: ",currentPath,"page Path is", pagePath)
     let current =
-      path === pagePath
+    currentPath === pagePath
         ? "bg-gray-100 text-[#d6293a]"
         : "text-black hover:bg-white hover:text-gray";
 
     return current + " px-3 py-2 rounded-lg text-base font-medium";
   }
 
-  console.log(setCurrentPage(path))
-
+  console.log(setCurrentPage(path));
 
   return (
-    <Link href="homepage/about">
-      <a className={classNames(setCurrentPage(path))}>{navPagesLink}</a>
+    <Link href={props?.linkedPage}>
+      <a className={classNames(setCurrentPage(path))}>{props.navPagesLink}</a>
     </Link>
   );
 };
-
 
 export default NavLinks;

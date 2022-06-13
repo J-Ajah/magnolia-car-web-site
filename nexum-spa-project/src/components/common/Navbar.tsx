@@ -27,12 +27,12 @@ export const Navbar: React.FC<Props> = (props) => {
   // IIFE Gets the navLinks for mobile display
   (() => {
     const navLinkValues = Object.entries(navLinks["0"]).map(
-      ([key, value], index) => {
+      ([_key, value], _index) => {
         return value.navPagesLink;
       }
     );
 
-    navLinkValues.map((value) => {
+    navLinkValues.forEach((value) => {
       if (typeof value === "string") {
         links.push(value);
       }

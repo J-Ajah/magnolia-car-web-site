@@ -6,3 +6,9 @@ form:
       $type: textField
       multiple: true
       required: true
+    linkedPage:
+      label: link page
+      $type: pageLinkField
+      showOptions: true
+      textInputAllowed: true
+      converterClass: info.magnolia.ui.editor.converter.JcrNodeToPathConverter
