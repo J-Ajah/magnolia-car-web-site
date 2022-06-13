@@ -1,6 +1,11 @@
 import { MdDoubleArrow } from "react-icons/md";
 
-type Props = {};
+type Props = {
+  caption: string;
+  link1: string;
+  link2: string;
+  link3: string;
+};
 
 export const LinkDetails: React.FC<Props> = (props) => {
   console.log("Value of props is: ",props)
@@ -8,7 +13,7 @@ export const LinkDetails: React.FC<Props> = (props) => {
     <div className="relative z-50 text-white w-[80%] mx-auto mt-14 ml-12 xl:flex xl:flex-wrap  xl:flex-start
     xl:align-top justify-evenly xl:content-start ">
       <div className="xl:w-[80%] h-fit">
-        <p className="caption w-[50%]">USEFUL LINKS</p>
+        <p className="caption w-[50%]">{props.caption}</p>
         <div
           className="mt-1 border-t-[2px] border-[tomato]
             w-[10%]"
@@ -17,15 +22,15 @@ export const LinkDetails: React.FC<Props> = (props) => {
       <div className="mt-2 xl:w-[80%] space-y-2 w-[100%]">
         <div className="flex space-x-2">
           <MdDoubleArrow className="text-[tomato] mt-1" />
-          <p className="text-[#f1f5f9] cursor-pointer">Homepage</p>
+          <p className="text-[#f1f5f9] cursor-pointer">{props?.link1}</p>
         </div>
         <div className="flex space-x-2">
           <MdDoubleArrow className="text-[tomato] mt-1" /> 
-          <p className="text-[#f1f5f9] cursor-pointer">Showroom</p>
+          <p className="text-[#f1f5f9] cursor-pointer">{props?.link2}</p>
         </div>
         <div className="flex space-x-2">
           <MdDoubleArrow className="text-[tomato] mt-1" />
-          <p className="text-[#f1f5f9] cursor-pointer">About</p>
+          <p className="text-[#f1f5f9] cursor-pointer">{props?.link3}</p>
         </div>
       </div>
     </div>

@@ -20,7 +20,6 @@ export const FooterPosts:React.FC<Props> = (props: Props) => {
       </div>
       <div className="mt-2 space-y-5">
       {/* Posts Area */}
-
       {
         props["Posts Area"] && (
           <EditableArea className="PostsArea" key="Posts Area" content={props["Posts Area"]} />

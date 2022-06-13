@@ -15,3 +15,7 @@ form:
       label: Email
       $type: textField
       required: true
+      validators:
+        email:
+          $type: emailValidator
+          errorMessage: Please enter a valid email address
