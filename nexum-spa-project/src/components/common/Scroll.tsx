@@ -1,20 +1,15 @@
-import React, { useEffect } from "react";
-
-function onScroll(e) {
-  const element = e.target;
-  console.log(element)
+window.onscroll = function () {
+  const element = document.querySelector(".to-top");
   if (
-    element.documentElement.scrollHeight ===
-    window.screenY + window.innerHeight
+    window.innerHeight + Math.ceil(window.scrollY) >=
+    document.body.offsetHeight - 400
   ) {
-    console.log("Page has been scrolled")
+    element.classList.remove("hide");
+    return;
   }
-  //   if(element.scrollHeight - element.scrollTop === element.clientHeight){
 
-  //   }
-}
-
-window.addEventListener("scroll", onScroll);
+  element.classList.add("hide");
+};
 
 export default function Scroll() {
   return null;

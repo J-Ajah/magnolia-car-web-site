@@ -1,4 +1,5 @@
 import { EditableArea } from "@magnolia/react-editor";
+import "animate.css";
 import dynamic from "next/dynamic";
 import type { NextPage } from "next";
 import Head from "next/head";
@@ -7,7 +8,6 @@ import car1 from "@/assets/car1.jpg";
 import { Layout } from "@/components/layouts/Layout";
 import type { AuthorPageProps } from "@/types/page-helper-types";
 import FooterCopyright from "../common/FooterCopyright";
-
 
 // Dynamic import of component
 const Scroll = dynamic(
@@ -24,10 +24,9 @@ export const Homepage: NextPage<AuthorPageProps> = ({
 }) => {
   console.log("props", props);
 
-
   return (
     <div className="page-container relative mr-auto ml-auto">
-      <Scroll/>
+      <Scroll />
       <Head>
         <title>{title}</title>
         <meta name="description" content={title} />
@@ -60,10 +59,10 @@ export const Homepage: NextPage<AuthorPageProps> = ({
         </div>
 
         <img
-          className="absolute top-[93%] right-10 z-50 cursor-pointer 
-      hover:scale-150 hover:tansition hover:duration-500
-      lg:w-[35px]
-      "
+          className="to-top hide animate-pulse fixed top-[73%] right-2 md:right-4 md:top-[89%] lg:top-[75%] shadow-lg lg:right-5 z-50 cursor-pointer 
+                    hover:scale-150 hover:tansition hover:duration-500
+                    lg:w-[35px]
+                    "
           src="/img/scrollToTop.svg"
           alt="scroll to top"
           onClick={() => {
