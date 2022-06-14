@@ -18,9 +18,11 @@ declare module '@magnolia/react-editor' {
   }
 
   type EditableAreaProps<T> = {
+    elementType?: string
     className?: string
     readonly key: string
     readonly content: T
+    item?: any
   }
 
   export function EditablePage<T>(

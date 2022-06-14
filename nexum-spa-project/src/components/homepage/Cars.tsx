@@ -1,32 +1,33 @@
 import { useEffect, useState } from "react";
 import { FaCar } from "react-icons/fa";
+import { getCarLength } from "./CarListing";
 
 // FaCar
 type Props = {
   carName: string;
   carDescription?: string;
   carImage: {};
+  carLength: any;
 };
-export const Cars: React.FC<Props> = ({
-  carName,
-  carDescription,
-  carImage,
-}) => {
+export const Cars: React.FC<Props> = (props: Props) => {
   const hostUrl = process.env["NEXT_PUBLIC_MGNL_HOST"];
-  const imageUrl = hostUrl + carImage["@link"];
+  const imageUrl = hostUrl + props.carImage["@link"];
+  const itemsLength = getCarLength().length;
 
   const [showInfo, setShowInfo] = useState(false);
+  let width: number | string = 100 / itemsLength;
+  width = width.toString() + "%";
+  console.log(width);
 
   return (
     <div
-      className="relative w-[100%] md:w-[50%] lg:w-[33%] cursor-pointer hover:transition-all"
+      className={`relative w-[100%] md:w-[50%] lg:w-[${width}] cursor-pointer hover:transition-all`}
       onMouseEnter={() => setShowInfo(true)}
       onMouseLeave={() => setShowInfo(false)}
     >
-      <img src={imageUrl} alt={carName} />
+      <img src={imageUrl} alt={props.carName} />
       {showInfo && (
         <>
-      
           <div
             className="w-[40px] h-[40px] absolute bottom-0 top-[38%]  ml-[55%]
           translate-x-[-100%] border-2 rounded-full bg-[white]"
@@ -39,7 +40,7 @@ export const Cars: React.FC<Props> = ({
             w-[250px] mx-auto"
             >
               {" "}
-              {carName}
+              {props.carName}
             </h3>
           </div>
         </>

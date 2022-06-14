@@ -1,6 +1,6 @@
 title: Footer Area Section
 visible: true
-dialog: nexum-core-templating:components/footer
+#dialog: nexum-core-templating:components/footer
 
 areas:
   footerArea:
@@ -17,8 +17,8 @@ areas:
         id: nexum-core-templating:components/subscribe
 
 
-  rightArea:
-    title: Copyright Area
-    availableComponents:
-      copyRightSection:
-        id: nexum-core-templating:components/footerCopyright
+#  rightArea:
+#    title: Copyright Area
+#    availableComponents:
+#      copyRightSection:
+#        id: nexum-core-templating:components/footerCopyright

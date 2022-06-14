@@ -2,7 +2,7 @@ import Link from "next/link";
 
 type Props = {
   icons?: {};
-  data: {
+  data?: {
     facebookImg?: {};
     twitterImg?: {};
     instagramImg?: {};
@@ -10,7 +10,6 @@ type Props = {
 };
 const footerCopyright: React.FC<Props> = ({ data }) => {
   const hostUrl = process.env["NEXT_PUBLIC_MGNL_HOST"];
-
 
   return (
     <div
@@ -23,7 +22,8 @@ const footerCopyright: React.FC<Props> = ({ data }) => {
           <a>
             <img
               className=" w-[35px]"
-              src={hostUrl + data?.facebookImg?.["@link"]}
+              // src={hostUrl + data?.facebookImg?.["@link"]}
+              src=""
               alt=""
             />
           </a>
@@ -32,7 +32,8 @@ const footerCopyright: React.FC<Props> = ({ data }) => {
           <a>
             <img
               className=" w-[34px]"
-              src={hostUrl + data?.twitterImg?.["@link"]}
+              // src={hostUrl + data?.twitterImg?.["@link"]}
+              src=""
               alt=""
             />
           </a>
@@ -41,7 +42,8 @@ const footerCopyright: React.FC<Props> = ({ data }) => {
           <a>
             <img
               className=" w-[35px]"
-              src={hostUrl + data?.instagramImg?.["@link"]}
+              // src={hostUrl + data?.instagramImg?.["@link"]}
+              src=""
               alt=""
             />
           </a>
