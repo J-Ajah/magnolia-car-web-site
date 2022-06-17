@@ -27,10 +27,19 @@
     @apply w-[100%];
   }
 
+  .socialIconsArea > .mgnlEditor{
+    @apply border-2 border-[tomato];
+  }
+
   /* Text caption style */
   .caption {
     @apply lg:text-lg;
   }
+
+  .footerDefault > .mgnlEditor{
+     @apply w-[100%] relative top-10;
+  }
+
 }
 
 body {
@@ -59,7 +68,3 @@ body {
   visibility: hidden;
 }
 
-.animate__animated .animate__bounce {
-  --animate-duration: 2s;
-  --animate-delay: 0.9s;
-}

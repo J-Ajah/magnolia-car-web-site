@@ -3,13 +3,13 @@ import "animate.css";
 import dynamic from "next/dynamic";
 import type { NextPage } from "next";
 import Head from "next/head";
-import { Navbar } from "@/components/common/Navbar";
-import car1 from "@/assets/car1.jpg";
 import { Layout } from "@/components/layouts/Layout";
 import type { AuthorPageProps } from "@/types/page-helper-types";
 import FooterCopyright from "../common/FooterCopyright";
+// import { getRightArea } from "@/components/common/Footer";
+import { useEffect, useState } from "react";
 
-// Dynamic import of component
+// Dynamic import of the scroll component
 const Scroll = dynamic(
   () => {
     return import("../common/Scroll");
@@ -17,12 +17,20 @@ const Scroll = dynamic(
   { ssr: false }
 );
 
+
 export const Homepage: NextPage<AuthorPageProps> = ({
   title,
   metadata,
   ...props
 }) => {
-  console.log("props", props);
+  // const [rightArea, setRightArea] = useState(getRightArea());
+  // useEffect(() => {
+  //   let area = getRightArea();
+  //   setRightArea(area);
+  // }, []);
+
+  console.log(props);
+  const areaTypes: Object = props;
 
   return (
     <div className="page-container relative mr-auto ml-auto">
@@ -54,7 +62,10 @@ export const Homepage: NextPage<AuthorPageProps> = ({
                 content={props["footer"]}
               />
             )}
-            <FooterCopyright />
+            {/* Copyright Area  */}
+            {props["rightArea"] && (
+              <FooterCopyright key="rightArea" content={areaTypes} />
+            )}
           </section>
         </div>
 

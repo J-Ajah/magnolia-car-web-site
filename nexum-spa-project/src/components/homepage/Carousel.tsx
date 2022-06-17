@@ -10,9 +10,9 @@ type Props = {
 };
 
 type sliderData = {
-  linkPath: string;
-  linkPath2: string;
-  linkPath3: string;
+  linkPath?: string;
+  linkPath2?: string;
+  linkPath3?: string;
   actionText: string;
   actionText2: string;
   actionText3: string;
@@ -28,7 +28,6 @@ type sliderData = {
   CTAArea?: {};
 };
 export const Carousel: React.FC<Props> = ({ data }) => {
-  console.log(data);
   const [carouselIndex, setCarouselIndex] = useState(0);
   const isMounted = useIsMounted();
   const hostUrl = process.env["NEXT_PUBLIC_MGNL_HOST"];

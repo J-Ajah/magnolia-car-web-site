@@ -1,0 +1,13 @@
+label: Add Privacy Terms
+
+
+form:
+  properties:
+    termsCaption:
+      label: Caption
+      $type: textField
+      required: true
+    termsLink:
+      label: Terms & Conditions Link
+      $type: textField
+      required: true

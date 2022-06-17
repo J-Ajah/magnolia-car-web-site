@@ -9,7 +9,6 @@ type Props = {
 
 const NavLinks: React.FC<Props> = (props) => {
   const route = useRouter();
-  console.log("I just logged this: ", props);
 
   let path = route.asPath;
   let pagePath =

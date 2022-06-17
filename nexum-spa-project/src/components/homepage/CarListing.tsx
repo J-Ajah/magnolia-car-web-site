@@ -2,35 +2,38 @@ import { EditableArea } from "@magnolia/react-editor";
 
 type Props = {
   carsListingArea: {
-    carLength: any;
+    carLength: [];
   };
 };
 
-let val : any;
+let val: any;
 
 export const CarListing: React.FC<Props> = ({ carsListingArea }) => {
-  const element = []
-   Object.entries(carsListingArea).forEach(([key,value])=>{
-    console.log("Element key is :",key, "Element Value :", value);
+  const element = [];
 
-    if(key.includes('0')){
-       element.push(value)
+  // Gets the list of cars that is available for display
+  Object.entries(carsListingArea).forEach(([key, value]) => {
+    if (key.includes("0")) {
+      element.push(value);
     }
-   });
+  });
 
-   val = element;
-
+  val = element;
 
   return (
-    <div className="car-container md:flex md:flex-wrap">
-     
+    <div className="car-container md:flex md:flex-wrap lg:flex-wrap">
       {carsListingArea && (
-          <EditableArea className="me flex flex-wrap" key="carsListingArea" item={element} content={carsListingArea} />
+        <EditableArea
+          className="me flex flex-wrap"
+          key="carsListingArea"
+          item={element}
+          content={carsListingArea}
+        />
       )}
     </div>
   );
 };
 
-export const getCarLength  = ()=>{
-   return val as any;
-}
+export const getCars = () => {
+  return val;
+};

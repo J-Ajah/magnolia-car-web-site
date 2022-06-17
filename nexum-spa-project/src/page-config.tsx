@@ -20,6 +20,9 @@ import Posts from "./components/common/Posts";
 import Servicespage from "./components/servicespage/Servicespage";
 import Showroompage from "./components/showroompage/ShowroomPage";
 import Contactpage from "./components/contactpage/Contactpage";
+import PrivacyTerms from "./components/common/PrivacyTerms";
+import SocialIcons from "./components/common/SocialIcons";
+import Copyright from "./components/common/Copyright";
 // import FooterCopyright from "./components/common/FooterCopyright";
 
 export const config = {
@@ -42,6 +45,11 @@ export const config = {
     "nexum-core-templating:components/footerPosts": FooterPosts as React.FC,
     "nexum-core-templating:components/subscribe": FooterSubscribe as React.FC,
     "nexum-core-templating:components/post": Posts as React.FC,
+    "nexum-core-templating:components/common/privacyTerms":
+      PrivacyTerms as React.FC,
+    "nexum-core-templating:components/common/socialIcons":
+      SocialIcons as React.FC,
+    "nexum-core-templating:components/common/copyright": Copyright as React.FC,
 
     // // pages
     "nexum-core-templating:pages/home": Homepage as React.FC,

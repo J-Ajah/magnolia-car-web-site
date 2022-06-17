@@ -29,3 +29,27 @@ areas:
     availableComponents:
       footer:
         id: nexum-core-templating:components/footer
+
+
+# Copyright footer starts here
+
+  rightArea:
+    title: Edit Copyright Area
+    maxComponents: 1
+    availableComponents:
+      copyrightInfo:
+        id: nexum-core-templating:components/common/copyright
+
+  socialIconsArea:
+    title: Social Icons Area
+    maxComponents: 1
+    availableComponents:
+      socialIcons:
+        id: nexum-core-templating:components/common/socialIcons
+
+  privacyTermsArea:
+    title: Privacy and Terms
+    maxComponents: 1
+    availableComponents:
+      privacyTerms:
+        id: nexum-core-templating:components/common/privacyTerms

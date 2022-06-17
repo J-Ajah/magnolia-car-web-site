@@ -6,51 +6,51 @@ form:
       $type: textField
       i18n: true
       required: true
-    facebookImg:
-      label: facebook
-      $type: damLinkField
-    facebookLink:
-      label: facebook link
-      $type: textField
-    twitterImg:
-      label: twitter
-      $type: damLinkField
-    twitterLink:
-      label: twitter link
-      $type: textField
-    instagramImg:
-      label: instagram
-      $type: damLinkField
-    instagramLink:
-      label: instagram link
-      $type: textField
-    policyLink:
-      label: Policy Link
-      $type: textField
-    termsLink:
-      label: Terms & Conditions Link
-      $type: textField
-
-
-  layout:
-    $type: tabbedLayout
-    tabs:
-      tab1:
-        label: Page Information
-        fields:
-          - name: title
-      tab2:
-        label: Footer Social Icons (Optional)
-        fields:
-          - name: facebookImg
-          - name: facebookLink
-          - name: twitterImg
-          - name: twitterLink
-          - name: instagramImg
-          - name: instagramLink
-
-      tab3:
-        label: Policy and Conditions (Optional)
-        fields:
-          - name: policyLink
-          - name: termsLink
+#    facebookImg:
+#      label: facebook
+#      $type: damLinkField
+#    facebookLink:
+#      label: facebook link
+#      $type: textField
+#    twitterImg:
+#      label: twitter
+#      $type: damLinkField
+#    twitterLink:
+#      label: twitter link
+#      $type: textField
+#    instagramImg:
+#      label: instagram
+#      $type: damLinkField
+#    instagramLink:
+#      label: instagram link
+#      $type: textField
+#    policyLink:
+#      label: Policy Link
+#      $type: textField
+#    termsLink:
+#      label: Terms & Conditions Link
+#      $type: textField
+#
+#
+#  layout:
+#    $type: tabbedLayout
+#    tabs:
+#      tab1:
+#        label: Page Information
+#        fields:
+#          - name: title
+##      tab2:
+##        label: Footer Social Icons (Optional)
+##        fields:
+##          - name: facebookImg
+##          - name: facebookLink
+##          - name: twitterImg
+##          - name: twitterLink
+##          - name: instagramImg
+##          - name: instagramLink
+##
+##      tab3:
+##        label: Policy and Conditions (Optional)
+##        fields:
+##          - name: policyLink
+##          - name: termsLink

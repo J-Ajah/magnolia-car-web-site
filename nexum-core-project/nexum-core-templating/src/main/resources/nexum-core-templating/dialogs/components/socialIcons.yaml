@@ -1,0 +1,22 @@
+label: Add Social Icons
+
+form:
+  properties:
+    facebookImg:
+      label: facebook
+      $type: damLinkField
+    facebookLink:
+      label: facebook link
+      $type: textField
+    twitterImg:
+      label: twitter
+      $type: damLinkField
+    twitterLink:
+      label: twitter link
+      $type: textField
+    instagramImg:
+      label: instagram
+      $type: damLinkField
+    instagramLink:
+      label: instagram link
+      $type: textField

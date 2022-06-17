@@ -15,7 +15,7 @@ type Props = {
   image3: Object;
 };
 
-export const Banner: React.FC<Props> = (props) => {
+export const Banner: React.FC<Props> = (props: Props) => {
 
 
   return (

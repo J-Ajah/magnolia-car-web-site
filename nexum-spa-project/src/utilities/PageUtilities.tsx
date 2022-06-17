@@ -46,7 +46,7 @@ export const useIsMounted = () => {
   return isMounted;
 };
 
-export const formatDate = (actualString) => {
+export const formatDate = (actualString: string) => {
   let publishDate = actualString.slice(0, 10);
   let reverseString = publishDate.split("-").reverse();
   const months = [

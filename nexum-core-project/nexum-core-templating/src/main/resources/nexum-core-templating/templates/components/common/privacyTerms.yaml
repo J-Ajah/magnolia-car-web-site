@@ -1,0 +1,4 @@
+title:  Privacy
+visible: true
+
+dialog: nexum-core-templating:components/privacyTerms

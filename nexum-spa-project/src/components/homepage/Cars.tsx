@@ -1,6 +1,7 @@
+import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { FaCar } from "react-icons/fa";
-import { getCarLength } from "./CarListing";
+import { getCars } from "./CarListing";
 
 // FaCar
 type Props = {
@@ -12,18 +13,29 @@ type Props = {
 export const Cars: React.FC<Props> = (props: Props) => {
   const hostUrl = process.env["NEXT_PUBLIC_MGNL_HOST"];
   const imageUrl = hostUrl + props.carImage["@link"];
-  const itemsLength = getCarLength().length;
+  const itemsLength = getCars().length;
+  const router = useRouter();
 
   const [showInfo, setShowInfo] = useState(false);
   let width: number | string = 100 / itemsLength;
   width = width.toString() + "%";
-  console.log(width);
-
+ console.log(itemsLength);
+//  [${itemsLength > 4 ? 20 : 50}%]
   return (
     <div
-      className={`relative w-[100%] md:w-[50%] lg:w-[${width}] cursor-pointer hover:transition-all`}
+      className={`relative w-[100%] md:w-[50%] lg:w-[${itemsLength > 4 ? 20 : 25}%]  lg:border-2 cursor-pointer hover:transition-all`}
       onMouseEnter={() => setShowInfo(true)}
       onMouseLeave={() => setShowInfo(false)}
+      onClick = {() =>{
+          router.push({
+            pathname: `car/${1}`,
+            query: {
+              name: props.carName,
+              description: props.carDescription,
+              image:imageUrl
+            },
+          },`car/${1}`)
+      }}
     >
       <img src={imageUrl} alt={props.carName} />
       {showInfo && (

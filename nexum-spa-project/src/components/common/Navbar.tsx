@@ -11,7 +11,7 @@ type Props = {
 };
 
 function classNames(...classes: string[]) {
-  console.log(classes.filter(Boolean).join(" "));
+  // console.log(classes.filter(Boolean).join(" "));
   return classes.filter(Boolean).join(" ");
 }
 

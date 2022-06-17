@@ -1,0 +1,12 @@
+label: Add a Copyright
+
+form:
+  properties:
+    rightCaption:
+      label: Copyright Caption
+      $type: textField
+      required: true
+    rightLink:
+      label: Policy Link
+      $type: textField
+
