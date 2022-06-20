@@ -6,7 +6,6 @@ type Props = {
   ctaText: string;
 };
 export const CtaDetails: React.FC<Props> = (props) => {
-  console.log(props);
   return (
     <>
       <div className="space-y-1">

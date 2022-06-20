@@ -14,3 +14,10 @@ form:
       label: Car Images
       $type: damLinkField
       required: true
+    carImage1:
+      label: Car Images
+      $type: damLinkField
+    carImage2:
+      label: Car Images
+      $type: damLinkField
+

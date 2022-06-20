@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import { FaCar } from "react-icons/fa";
 import { getCars } from "./CarListing";
 
-// FaCar
 type Props = {
   carName: string;
   carDescription?: string;
@@ -17,27 +16,34 @@ export const Cars: React.FC<Props> = (props: Props) => {
   const router = useRouter();
 
   const [showInfo, setShowInfo] = useState(false);
-  let width: number | string = 100 / itemsLength;
-  width = width.toString() + "%";
- console.log(itemsLength);
-//  [${itemsLength > 4 ? 20 : 50}%]
+  let itemWidth: string | number = itemsLength > 4 ? 20 : 25;
+  itemWidth = itemWidth + "%";
+
   return (
     <div
-      className={`relative w-[100%] md:w-[50%] lg:w-[${itemsLength > 4 ? 20 : 25}%]  lg:border-2 cursor-pointer hover:transition-all`}
+      className={`car relative w-[100%] md:w-[50%] lg:!w-[${itemWidth}]  lg:border-2 cursor-pointer hover:transition-all`}
       onMouseEnter={() => setShowInfo(true)}
       onMouseLeave={() => setShowInfo(false)}
-      onClick = {() =>{
-          router.push({
-            pathname: `car/${1}`,
-            query: {
-              name: props.carName,
-              description: props.carDescription,
-              image:imageUrl
-            },
-          },`car/${1}`)
-      }}
     >
-      <img src={imageUrl} alt={props.carName} />
+      <img
+        src={imageUrl}
+        alt={props.carName}
+        onClick={(e) => {
+          router.push(
+            {
+              pathname: `car/${props.carName}`,
+              query: {
+                name: props.carName,
+                description: props.carDescription,
+                image: imageUrl,
+              },
+            },
+            `car/${props.carName}`
+          );
+
+          e.stopPropagation();
+        }}
+      />
       {showInfo && (
         <>
           <div
@@ -46,10 +52,13 @@ export const Cars: React.FC<Props> = (props: Props) => {
           >
             <FaCar className="text-[#c72b2b] mx-auto  w-[22px] h-[22px] translate-y-[30%]" />
           </div>
-          <div className="bg-[#ca2415]    text-white h-[80px] absolute w-full bottom-0">
+          <div
+            className="bg-[#ca2415]  text-white h-[80px] absolute w-full bottom-0
+           lg:h-[50px] "
+          >
             <h3
               className="font-bold text-[15px] text-center  mt-5
-            w-[250px] mx-auto"
+            w-[250px] mx-auto lg:text-[13px] lg:mt-3"
             >
               {" "}
               {props.carName}

@@ -23,7 +23,6 @@ const footerCopyright: React.FC<Props> = ({ content }) => {
   console.log(socialIconsArea);
   if (typeof window !== "undefined") {
     // Client-side-only code
-    console.log(window.location.search.includes("mgnlPreview"));
     isPageEditable = window.location.search.includes("mgnlPreview");
   }
   return (
