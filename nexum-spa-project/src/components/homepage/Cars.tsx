@@ -3,18 +3,25 @@ import { useEffect, useState } from "react";
 import { FaCar } from "react-icons/fa";
 import { getCars } from "./CarListing";
 
+
 type Props = {
   carName: string;
   carDescription?: string;
   carImage: {};
   carImage1: {};
   carImage2: {};
-  carLength: any;
+  carLength: number;
+  price: string;
+  condition: string;
+  make: string;
+  transmission: string;
+  year: string;
+  model: string;
+  specification: Object;
 };
 export const Cars: React.FC<Props> = (props: Props) => {
   const hostUrl = process.env["NEXT_PUBLIC_MGNL_HOST"];
   const imageUrl = hostUrl + props.carImage["@link"];
-  console.log(props);
   const images = [
     hostUrl + props.carImage["@link"],
     hostUrl + props?.carImage1?.["@link"],
@@ -24,10 +31,14 @@ export const Cars: React.FC<Props> = (props: Props) => {
   const router = useRouter();
 
   const [showInfo, setShowInfo] = useState(false);
-  let itemWidth: string | number = itemsLength > 4 ? 20 : 25;
-  itemWidth = itemWidth + "%";
+  let itemWidth: number | string = 100 / itemsLength;
+
+  
+
+  // @ts-ignore
+  itemWidth = Math.floor(parseInt(itemWidth)) + "%";
   // ${itemWidth.toString() === '20%' ? '20%' : "25%"}
-  console.log(itemWidth.toString());
+  console.log(itemWidth);
   const sendData = () => {
     router.push(
       {
@@ -36,18 +47,31 @@ export const Cars: React.FC<Props> = (props: Props) => {
           name: props.carName,
           description: props.carDescription,
           image: images,
+          price: props.price,
+          year: props.year,
+          make: props.make,
+          condition: props.condition,
+          model: props.model,
+          transmission: props.transmission,
         },
       },
       `car/${props.carName}`
     );
   };
+
   return (
     <div
-      className={'car relative w-[100%] md:w-[50%] ' + (itemWidth === '20%' ?'lg:w-[20%]' : 'lg:w-[25%]') + ' lg:border-2 cursor-pointer hover:transition-all'}
+      className={
+        "car relative w-[100%] md:w-[50%] " +
+        (itemWidth === "25%" ?  'lg:w-[25%] ' : '') + (itemWidth === "20%" ?  'lg:w-[20%] ': '') +
+        (itemWidth === "33%" ?  'lg:w-[33%] ' : '')+ (itemWidth === "50%" ?  'lg:w-[50%]' : '') +
+        " lg:border-2 cursor-pointer hover:transition-all"
+      }
       onMouseEnter={() => setShowInfo(true)}
       onMouseLeave={() => setShowInfo(false)}
     >
-      <img src={imageUrl} alt={props.carName} onClick={sendData} />
+      <img src={imageUrl} alt={props.carName} onClick={sendData} 
+      />
       {showInfo && (
         <>
           <div
@@ -62,10 +86,13 @@ export const Cars: React.FC<Props> = (props: Props) => {
             onClick={sendData}
           >
             <h3
-              className={`font-bold text-[15px] text-center mt-5
-            w-[250px] mx-auto  lg:mt-3"
-            lg:text-[${itemWidth.toString() === "20%" ? "13px" : "20px"}]`
-          }
+              className={
+                "font-bold text-[15px] text-center mt-5 w-[250px] mx-auto " +
+                (itemWidth === "20%"
+                  ? "lg:text-[15px]  lg:mt-[20px]"
+                  : "text-[16px]") +
+                " lg:mt-5"
+              }
             >
               {" "}
               {props.carName}

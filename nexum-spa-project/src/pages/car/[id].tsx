@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import parser from "html-react-parser";
 import { BiHelpCircle } from "react-icons/bi";
-import { Navigation, Thumbs } from "swiper";
+import SwiperCore,{ Navigation, Thumbs, Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css";
@@ -10,12 +10,23 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
+
+
+
 const Details = () => {
+SwiperCore.use([Autoplay])
   const router = useRouter();
   const data = router.query;
   let images = data?.image as [];
 
   const [activeThumb, setActiveThumb] = useState<any>();
+  const specification = {
+    make: data?.make,
+    model: data?.model,
+    year: data.year,
+    transmission: data?.transmission,
+    condition: data?.condition,
+  };
 
   return (
     <div className="w-[100%]  my-4 lg:flex lg:w-[90%] lg:mx-auto">
@@ -24,10 +35,14 @@ const Details = () => {
           <Swiper
             modules={[Navigation, Thumbs]}
             spaceBetween={1}
+            loop={true}
             slidesPerView={1}
             thumbs={{ swiper: activeThumb }}
             grabCursor={true}
             navigation={true}
+            autoplay={{
+              delay: 5000
+            }}
             className="text-white"
           >
             {images?.map((item: string, key: number) => {
@@ -88,12 +103,14 @@ const Details = () => {
         >
           {data.name}
         </h1>
-        <p className="text-lg mt-4 w-[80%] md:text-[22px]  mx-auto text-center font-semibold px-4 
-        lg:px-0 lg:text-[18px] text-justify">
+        <p
+          className="text-lg mt-4 w-[80%] md:text-[22px]  mx-auto text-center font-semibold px-4 
+        lg:px-0 lg:text-[18px] text-justify"
+        >
           {data.description && parser(data.description as string)}
         </p>
         <p className="text-[red] text-[30px] md:text-[35px] font-bold text-center mt-4">
-          $19,900.00
+          ${data.price}
         </p>
         <div className="flex border-[1.5px] p-3 w-[80%] justify-center mx-auto mt-4 cursor-pointer">
           <BiHelpCircle className="mt-1 md:mt-[6.5px] text-[20px]" />
@@ -108,46 +125,19 @@ const Details = () => {
           <div className="border-b-[2px] border-[red]  w-[15%] md:w-[10%] mt-2"></div>
 
           <div className="details mt-4 pb-2">
-            <div className="flex  justify-between  ">
-              <p className="font-semibold md:text-[20px] lg:text-[18px] lg:mb-3">
-                Year
-              </p>
-              <p className="font-semibold md:text-[20px] lg:text-[18px] lg:mb-3">
-                2011
-              </p>
-            </div>
-            <div className="flex  justify-between  ">
-              <p className="font-semibold md:text-[20px] lg:text-[18px] lg:mb-3">
-                Make
-              </p>
-              <p className="font-semibold md:text-[20px] lg:text-[18px] lg:mb-3">
-                Lexus
-              </p>
-            </div>
-            <div className="flex  justify-between ">
-              <p className="font-semibold md:text-[20px] lg:text-[18px] lg:mb-3">
-                Model
-              </p>
-              <p className="font-semibold md:text-[20px] lg:text-[18px] lg:mb-3">
-                RX
-              </p>
-            </div>
-            <div className="flex  justify-between ">
-              <p className="font-semibold md:text-[20px] lg:text-[18px] lg:mb-3">
-                Condition
-              </p>
-              <p className="font-semibold md:text-[20px] lg:text-[18px] lg:mb-3">
-                Used
-              </p>
-            </div>
-            <div className="flex  justify-between ">
-              <p className="font-semibold md:text-[20px] lg:text-[18px] lg:mb-3">
-                Transmission
-              </p>
-              <p className="font-semibold md:text-[20px] lg:text-[18px] lg:mb-3">
-                Automatic
-              </p>
-            </div>
+            {Object?.entries(specification).map(([key, val]) => {
+              
+              return (
+                <div className="flex  justify-between  ">
+                  <p className="font-semibold md:text-[20px] lg:text-[18px] lg:mb-3">
+                    {key[0].toUpperCase() + key.slice(1,key.length)}
+                  </p>
+                  <p className="font-semibold md:text-[20px] lg:text-[18px] lg:mb-3">
+                    {val}
+                  </p>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>

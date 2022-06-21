@@ -17,7 +17,6 @@ const Scroll = dynamic(
   { ssr: false }
 );
 
-
 export const Homepage: NextPage<AuthorPageProps> = ({
   title,
   metadata,
