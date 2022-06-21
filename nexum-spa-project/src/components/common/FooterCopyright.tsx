@@ -16,11 +16,11 @@ type Props = {
 };
 const footerCopyright: React.FC<Props> = ({ content }) => {
   const hostUrl = process.env["NEXT_PUBLIC_MGNL_HOST"];
-  console.log(content);
+
   const { socialIconsArea, rightArea, privacyTermsArea } = content;
   let isPageEditable: boolean;
 
-  console.log(socialIconsArea);
+
   if (typeof window !== "undefined") {
     // Client-side-only code
     isPageEditable = window.location.search.includes("mgnlPreview");

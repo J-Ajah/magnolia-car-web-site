@@ -14,7 +14,7 @@ type Props = {
 let rightArea = {};
 
 const Footer: React.FC<Props> = (props: Props) => {
-  console.log(props);
+
   // rightArea = props["rightArea"];
   return (
     <>

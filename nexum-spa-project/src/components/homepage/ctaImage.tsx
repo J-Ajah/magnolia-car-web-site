@@ -7,7 +7,6 @@ type Props = {
 export const ctaImage: React.FC<Props> = (props) => {
   const hostUrl = process.env["NEXT_PUBLIC_MGNL_HOST"];
   const imageUrl = hostUrl + props.ctaImage["@link"];
-  console.log(props);
   return (
     <div
       className="absolute border-2 w-full h-[100px] bottom-20"

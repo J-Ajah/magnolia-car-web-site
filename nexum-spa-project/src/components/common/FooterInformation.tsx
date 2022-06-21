@@ -7,7 +7,7 @@ type Props = {
   email: string;
 };
 export const FooterInformation = (props: Props) => {
-  console.log(props);
+
   return (
     <div className="relative text-[#efecec] mx-auto w-[80%] z-40 mt-14 ml-12 gap-4">
       <p>{props.serviceSum}</p>

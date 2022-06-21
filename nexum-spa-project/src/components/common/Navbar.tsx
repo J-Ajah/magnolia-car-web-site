@@ -19,7 +19,7 @@ export const Navbar: React.FC<Props> = (props) => {
   const route = useRouter();
   let path = route.asPath;
   let activePage = setCurrentPage(path);
-  console.log(activePage);
+
 
   const navLinks: Array<Object> = Array(props.navLinksArea);
   const links = [];

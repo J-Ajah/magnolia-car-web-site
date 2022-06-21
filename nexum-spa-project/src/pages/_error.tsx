@@ -6,7 +6,7 @@ import lottieJson from "@/Lottie/75352-404-error-baloon.json";
 
 export default function MyError(props) {
   // console.log("status code is logged here: ", title);
-  console.log(props);
+
   return (
     <Layout>
       <div className="text-lg font-bold">

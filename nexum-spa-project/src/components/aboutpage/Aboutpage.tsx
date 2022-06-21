@@ -6,7 +6,6 @@ import { Layout } from '@/components/layouts/Layout'
 import type { AuthorPageProps } from '@/types/page-helper-types'
 
 export const Aboutpage:NextPage<AuthorPageProps> = ({ title, metadata, ...props }) => {
-    console.log('props', props)
     return (
         <div className=" mr-auto ml-auto">
           <Head>

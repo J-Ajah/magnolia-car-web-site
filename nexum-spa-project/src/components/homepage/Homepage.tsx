@@ -29,7 +29,6 @@ export const Homepage: NextPage<AuthorPageProps> = ({
   //   setRightArea(area);
   // }, []);
 
-  console.log(props);
   const areaTypes: Object = props;
 
   return (

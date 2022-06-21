@@ -10,6 +10,26 @@ form:
       label: Car Description
       $type: richTextField
       required: true
+    price:
+      label: Price
+      $type: textField
+      required: true
+    year:
+      label: Year
+      $type: textField
+    make:
+      label: Make
+      $type: textField
+    model:
+      label: Model
+      $type: textField
+      required: true
+    condition:
+      label: Condition
+      $type: textField
+    transmission:
+      label: transmission
+      $type: textField
     carImage:
       label: Car Images
       $type: damLinkField

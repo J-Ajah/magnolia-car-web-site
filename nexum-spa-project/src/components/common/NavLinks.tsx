@@ -16,7 +16,6 @@ const NavLinks: React.FC<Props> = (props) => {
     props.navPagesLink.slice(1, props.navPagesLink.length);
 
   function classNames(currentPath: string) {
-    console.log("Current path is: ",currentPath,"page Path is", pagePath)
     let current =
     currentPath === pagePath
         ? "bg-gray-100 text-[#d6293a]"
@@ -24,8 +23,6 @@ const NavLinks: React.FC<Props> = (props) => {
 
     return current + " px-3 py-2 rounded-lg text-base font-medium";
   }
-
-  console.log(setCurrentPage(path));
 
   return (
     <Link href={props?.linkedPage}>

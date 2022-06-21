@@ -11,6 +11,7 @@ let val: any;
 export const CarListing: React.FC<Props> = ({ carsListingArea }) => {
   const element = [];
 
+
   // Gets the list of cars that is available for display
   Object.entries(carsListingArea).forEach(([key, value]) => {
     if (key.includes("0")) {

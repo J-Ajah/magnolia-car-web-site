@@ -10,7 +10,7 @@ type Props = {
 const SocialIcons: React.FC<Props> = (props: Props) => {
   const hostUrl = process.env["NEXT_PUBLIC_MGNL_HOST"];
   //   src={hostUrl + data?.facebookImg?.["@link"]}
-  console.log(props);
+
   return (
     <>
       <Link className="cursor-pointer" href="#">
