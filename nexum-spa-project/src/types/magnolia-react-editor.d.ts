@@ -21,7 +21,8 @@ declare module '@magnolia/react-editor' {
     elementType?: string
     className?: string
     readonly key: string
-    readonly content: T
+    readonly content: T 
+    readonly parentTemplateId?: string
     item?: any
   }
 

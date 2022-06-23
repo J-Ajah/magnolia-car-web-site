@@ -20,7 +20,6 @@ const footerCopyright: React.FC<Props> = ({ content }) => {
   const { socialIconsArea, rightArea, privacyTermsArea } = content;
   let isPageEditable: boolean;
 
-
   if (typeof window !== "undefined") {
     // Client-side-only code
     isPageEditable = window.location.search.includes("mgnlPreview");

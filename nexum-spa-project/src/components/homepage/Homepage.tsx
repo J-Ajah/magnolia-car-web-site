@@ -6,7 +6,7 @@ import Head from "next/head";
 import { Layout } from "@/components/layouts/Layout";
 import type { AuthorPageProps } from "@/types/page-helper-types";
 import FooterCopyright from "../common/FooterCopyright";
-// import { getRightArea } from "@/components/common/Footer";
+import axios from "axios";
 import { useEffect, useState } from "react";
 
 // Dynamic import of the scroll component
@@ -22,13 +22,8 @@ export const Homepage: NextPage<AuthorPageProps> = ({
   metadata,
   ...props
 }) => {
-  // const [rightArea, setRightArea] = useState(getRightArea());
-  // useEffect(() => {
-  //   let area = getRightArea();
-  //   setRightArea(area);
-  // }, []);
-
   const areaTypes: Object = props;
+  console.log("Homepage navArea has been logged", props["navArea"]);
 
   return (
     <div className="page-container relative mr-auto ml-auto">
@@ -85,3 +80,5 @@ export const Homepage: NextPage<AuthorPageProps> = ({
     </div>
   );
 };
+
+

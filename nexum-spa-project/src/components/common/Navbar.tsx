@@ -6,8 +6,8 @@ import { EditableArea } from "@magnolia/react-editor";
 import { setCurrentPage } from "@/utilities/PageUtilities";
 
 type Props = {
-  readonly image: string;
-  readonly navLinksArea: Object;
+  readonly image?: string;
+  readonly navLinksArea?: Object;
 };
 
 function classNames(...classes: string[]) {
@@ -19,7 +19,8 @@ export const Navbar: React.FC<Props> = (props) => {
   const route = useRouter();
   let path = route.asPath;
   let activePage = setCurrentPage(path);
-
+  console.log(props)
+  
 
   const navLinks: Array<Object> = Array(props.navLinksArea);
   const links = [];
@@ -31,6 +32,7 @@ export const Navbar: React.FC<Props> = (props) => {
         return value.navPagesLink;
       }
     );
+  
 
     navLinkValues.forEach((value) => {
       if (typeof value === "string") {
@@ -38,8 +40,9 @@ export const Navbar: React.FC<Props> = (props) => {
       }
     });
   })();
-
   // IIFE Ends here
+
+  console.log(Object.keys(props?.["logoArea"]).length > 0)
 
   return (
     <Disclosure as="nav" className="bg-gray-100 border-2 border-gray-200">
@@ -49,8 +52,8 @@ export const Navbar: React.FC<Props> = (props) => {
             <div className="relative flex items-center justify-between py-2">
               <div className="inset-y-0 left-0 flex items-center md:hidden w-full justify-between">
                 {/* Mobile menu button*/}
-                {props["logoArea"] && (
-                  <EditableArea key="logoArea" content={props["logoArea"]} />
+                {Object.keys(props?.["logoArea"]).length > 0 && (
+                  <EditableArea key="logoArea" content={props?.["logoArea"]} />
                 )}
                 {/* <h3 className="font-bold text-xl tracking-wide">Car Dealer</h3> */}
                 <Disclosure.Button className="inline-flex h-10 items-center justify-center p-2 rounded-md text-black bg-gray-200 hover:text-white hover:bg-[#d6293a] focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
@@ -64,8 +67,11 @@ export const Navbar: React.FC<Props> = (props) => {
               </div>
               <div className="flex-0 flex items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex-shrink-0 flex items-center hidden md:block">
-                  {props["logoArea"] && (
-                    <EditableArea key="logoArea" content={props["logoArea"]} />
+                  {Object.keys(props?.["logoArea"]).length > 0 && (
+                    <EditableArea
+                      key="logoArea"
+                      content={props?.["logoArea"]}
+                    />
                   )}
                 </div>
               </div>
@@ -73,10 +79,12 @@ export const Navbar: React.FC<Props> = (props) => {
                 <div className="flex-0 flex items-center justify-center sm:items-stretch sm:justify-start">
                   <div className="hidden md:block sm:ml-2 pr-8">
                     <div className="nav-links flex space-x-4 flex-wrap">
-                      <EditableArea
-                        key="navLinksArea"
-                        content={props["navLinksArea"]}
-                      />
+                      {Object.keys(props?.["navLinksArea"]).length > 0 && (
+                        <EditableArea
+                          key="navLinksArea"
+                          content={props?.["navLinksArea"]}
+                        />
+                      )}
                       <div />
                     </div>
                   </div>
@@ -91,7 +99,7 @@ export const Navbar: React.FC<Props> = (props) => {
             <div className="px-6 pt-2 pb-3 space-y-1">
               {links.map((item, key) => (
                 <Disclosure.Button
-                  key={item}
+                  key={key}
                   as="a"
                   href={item}
                   className={`block px-3 py-2 rounded-md text-base font-medium 

@@ -1,0 +1,16 @@
+title: Details
+visibe: true
+baseUrl: http://localhost:3000
+routeTemplate: '/{language}{{@path}}'
+renderType: spa
+class: info.magnolia.rendering.spa.renderer.SpaRenderableDefinition
+
+dialog: nexum-core-templating:pages/details
+
+
+areas:
+  navArea:
+    title: Navigation Area
+    availableComponents:
+      Navbar:
+        id: nexum-core-templating:components/common/navbar

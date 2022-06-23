@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import { FaCar } from "react-icons/fa";
 import { getCars } from "./CarListing";
 
-
 type Props = {
   carName: string;
   carDescription?: string;
@@ -33,29 +32,29 @@ export const Cars: React.FC<Props> = (props: Props) => {
   const [showInfo, setShowInfo] = useState(false);
   let itemWidth: number | string = 100 / itemsLength;
 
-  
-
   // @ts-ignore
   itemWidth = Math.floor(parseInt(itemWidth)) + "%";
   // ${itemWidth.toString() === '20%' ? '20%' : "25%"}
   console.log(itemWidth);
   const sendData = () => {
+    const carInfo = {
+      name: props.carName,
+      description: props.carDescription,
+      images: images,
+      price: props?.price,
+      year: props.year,
+      make: props.make,
+      condition: props.condition,
+      model: props.model,
+      transmission: props.transmission,
+    };
+
+    localStorage.setItem("carInfo", JSON.stringify(carInfo));
     router.push(
       {
-        pathname: `car/${props.carName}`,
-        query: {
-          name: props.carName,
-          description: props.carDescription,
-          image: images,
-          price: props.price,
-          year: props.year,
-          make: props.make,
-          condition: props.condition,
-          model: props.model,
-          transmission: props.transmission,
-        },
+        pathname: `homepage/details/${props.carName}`,
       },
-      `car/${props.carName}`
+      `homepage/details?${props.carName}`
     );
   };
 
@@ -63,15 +62,16 @@ export const Cars: React.FC<Props> = (props: Props) => {
     <div
       className={
         "car relative w-[100%] md:w-[50%] " +
-        (itemWidth === "25%" ?  'lg:w-[25%] ' : '') + (itemWidth === "20%" ?  'lg:w-[20%] ': '') +
-        (itemWidth === "33%" ?  'lg:w-[33%] ' : '')+ (itemWidth === "50%" ?  'lg:w-[50%]' : '') +
+        (itemWidth === "25%" ? "lg:w-[25%] " : "") +
+        (itemWidth === "20%" ? "lg:w-[20%] " : "") +
+        (itemWidth === "33%" ? "lg:w-[33%] " : "") +
+        (itemWidth === "50%" ? "lg:w-[50%]" : "") +
         " lg:border-2 cursor-pointer hover:transition-all"
       }
       onMouseEnter={() => setShowInfo(true)}
       onMouseLeave={() => setShowInfo(false)}
     >
-      <img src={imageUrl} alt={props.carName} onClick={sendData} 
-      />
+      <img src={imageUrl} alt={props.carName} onClick={sendData} />
       {showInfo && (
         <>
           <div

@@ -10,6 +10,7 @@ systemProperties:
 
 nodeTypes:
   - mgnl:page
+  - mgnl:area
 childNodeTypes:
   - mgnl:area
   - mgnl:component

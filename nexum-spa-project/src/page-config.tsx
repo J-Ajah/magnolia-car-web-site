@@ -23,6 +23,7 @@ import Contactpage from "./components/contactpage/Contactpage";
 import PrivacyTerms from "./components/common/PrivacyTerms";
 import SocialIcons from "./components/common/SocialIcons";
 import Copyright from "./components/common/Copyright";
+import Details from "./components/details/Details";
 // import FooterCopyright from "./components/common/FooterCopyright";
 
 export const config = {
@@ -57,5 +58,7 @@ export const config = {
     "nexum-core-templating:pages/service": Servicespage as React.FC,
     "nexum-core-templating:pages/showroom": Showroompage as React.FC,
     "nexum-core-templating:pages/contactUs": Contactpage as React.FC,
+    "nexum-core-templating:pages/details": Details as React.FC,
+
   },
 };
