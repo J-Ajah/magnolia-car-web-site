@@ -23,12 +23,11 @@ interface carInfo {
   year?: string;
   model?: string;
 }
-const Details = (props) => {
+const Details = () => {
   const url = process.env["NEXT_PUBLIC_MGNL_ENDPOINT_BASE_URL"];
+  SwiperCore.use([Autoplay]);
   const router = useRouter();
   const data = router.query;
-  let images = data?.image as [];
- 
 
   const [activeThumb, setActiveThumb] = useState<any>();
   const [carInfo, setcarInfo] = useState<carInfo>();
@@ -42,23 +41,24 @@ const Details = (props) => {
     setcarInfo(carData);
 
     (async () => {
+      //gets the nav bar
       const navData = await fetch(`${url}/pages/v1/homepage/navArea`);
       const response = await navData.json();
-
-      const footer = await fetch(`${url}/pages/v1/homepage/navArea`);
-      const footerResponse = await footer.json();
       setNav(response);
+
+      //gets the extended footer
+      const footer1 = await fetch(`${url}/pages/v1/homepage/footer`);
+      const footerResponse = await footer1.json();
       setFooter(footerResponse);
     })();
 
     setSpecification({
-        make: carData?.make,
-        model: carData?.model,
-        year: carData.year,
-        transmission: carData?.transmission,
-        condition: carData?.condition,
-      })
-    console.log(specification);
+      make: carData?.make,
+      model: carData?.model,
+      year: carData.year,
+      transmission: carData?.transmission,
+      condition: carData?.condition,
+    });
   }, []);
 
   return (
@@ -120,7 +120,7 @@ const Details = (props) => {
                       <img
                         className="w-[100%] h-[60px] md:h-[90px] lg:h-[100px] xl:h-[120px] object-cover"
                         src={item}
-                        alt={data.name as string}
+                        alt={carInfo?.name}
                       />
                     </SwiperSlide>
                   );
@@ -131,13 +131,13 @@ const Details = (props) => {
 
           <div
             className="mt-7 lg:px-4 lg:pt-5  lg:ml-5 lg:w-[40%] rounded border-[1.5px] pt-4
-      lg:mt-0"
+      lg:mt-0 lg:pb-5"
           >
             <h1
               className=" text-[18px]  text-center font-bold lg:text-[24px] antialiased
         md:text-[28px]"
             >
-              {data.name}
+              {carInfo?.name}
             </h1>
             <p
               className="text-lg mt-4 w-[80%] md:text-[22px]  mx-auto text-center font-semibold px-4 
@@ -145,7 +145,7 @@ const Details = (props) => {
             >
               {carInfo?.description && parser(carInfo.description.toString())}
             </p>
-            <p className="te    xt-[red] text-[30px] md:text-[35px] font-bold text-center mt-4">
+            <p className="text-[red] text-[30px] md:text-[35px] font-bold text-center mt-4">
               ${carInfo?.price}
             </p>
             <div className="flex border-[1.5px] p-3 w-[80%] justify-center mx-auto mt-4 cursor-pointer">
@@ -179,7 +179,9 @@ const Details = (props) => {
           </div>
         </div>
       </div>
-      {/* <div>{footer ? <EditableArea key="footer-Area" content={footer} /> : null}</div> */}
+      <div className="bg-black mt-10 pt-3 px-6">
+        {footer ? <EditableArea key="footer-Area" content={footer} /> : null}
+      </div>
     </>
   );
 };

@@ -2,6 +2,7 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { FaCar } from "react-icons/fa";
 import { getCars } from "./CarListing";
+import "animate.css";
 
 type Props = {
   carName: string;
@@ -35,7 +36,7 @@ export const Cars: React.FC<Props> = (props: Props) => {
   // @ts-ignore
   itemWidth = Math.floor(parseInt(itemWidth)) + "%";
   // ${itemWidth.toString() === '20%' ? '20%' : "25%"}
-  console.log(itemWidth);
+  console.log(itemWidth < "25%");
   const sendData = () => {
     const carInfo = {
       name: props.carName,
@@ -66,6 +67,7 @@ export const Cars: React.FC<Props> = (props: Props) => {
         (itemWidth === "20%" ? "lg:w-[20%] " : "") +
         (itemWidth === "33%" ? "lg:w-[33%] " : "") +
         (itemWidth === "50%" ? "lg:w-[50%]" : "") +
+        (itemWidth < "25%" ? "lg:w-[25%]" : "") +
         " lg:border-2 cursor-pointer hover:transition-all"
       }
       onMouseEnter={() => setShowInfo(true)}
@@ -75,13 +77,13 @@ export const Cars: React.FC<Props> = (props: Props) => {
       {showInfo && (
         <>
           <div
-            className="w-[40px] h-[40px] absolute bottom-0 top-[38%]  ml-[55%]
+            className="animate__animated animate__slideInDown w-[40px] h-[40px] absolute bottom-0 top-[38%]  ml-[47%]
           translate-x-[-100%] border-2 rounded-full bg-[white]"
           >
             <FaCar className="text-[#c72b2b] mx-auto  w-[22px] h-[22px] translate-y-[30%]" />
           </div>
           <div
-            className={`bg-[#ca2415]  text-white h-[80px] absolute w-full bottom-0
+            className={`animate__animated animate__slideInUp bg-[#ca2415]   text-white h-[80px] absolute w-full bottom-0
            lg:h-[${itemWidth.toString() === "20%" ? "50px" : "80px"}]`}
             onClick={sendData}
           >

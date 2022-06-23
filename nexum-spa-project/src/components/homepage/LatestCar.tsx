@@ -6,7 +6,7 @@ export const LatestCar: React.FC<Props> = (props: Props) => {
   return (
     <div
       className="w-fit text-xl mx-auto h-[100px] mt-[20px] md:h-[200px]  md:mt-20 text-center
-    font-bold md:text-1xl"
+    font-bold md:text-1xl lg:text-[28px]"
     >
       <div>
         {props.name}

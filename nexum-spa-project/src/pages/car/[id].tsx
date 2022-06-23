@@ -54,7 +54,7 @@ const Details = (props) => {
   // );
   return (
     <>
-      <div className="w-[100%]  my-4 lg:flex lg:w-[90%] lg:mx-auto">
+      {/* <div className="w-[100%]  my-4 lg:flex lg:w-[90%] lg:mx-auto">
         <div className="w-[100%]  lg:w-[65%] ">
           <div>
             <Swiper
@@ -166,20 +166,20 @@ const Details = (props) => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </>
   );
 };
 
-export async function getServerSideProps(context) {
-  console.log("I have been called");
-  const navBar = await fetch(
-    "http://localhost:8080/magnoliaAuthor/.rest/delivery/pages/v1/homepage"
-  );
-  const response = await navBar.json();
-  console.log(response?.navArea);
-  return {
-    props: response?.navArea, // will be passed to the page component as props
-  };
-}
+// export async function getServerSideProps(context) {
+//   console.log("I have been called");
+//   const navBar = await fetch(
+//     "http://localhost:8080/magnoliaAuthor/.rest/delivery/pages/v1/homepage"
+//   );
+//   const response = await navBar.json();
+//   console.log(response?.navArea);
+//   return {
+//     props: response?.navArea, // will be passed to the page component as props
+//   };
+// }
 export default Details;
