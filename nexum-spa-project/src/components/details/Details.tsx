@@ -133,6 +133,17 @@ const Details = () => {
             className="mt-7 lg:px-4 lg:pt-5  lg:ml-5 lg:w-[40%] rounded border-[1.5px] pt-4
       lg:mt-0 lg:pb-5"
           >
+            <div className="font-semibold cursor-pointer antialiased">
+              Homepage{" "}
+              <span>
+                {" "}
+                <span className="font-normal">/</span>{" "}
+              </span>
+              <span>
+                Details <span className="font-normal">/</span>
+              </span>{" "}
+              <span className="font-bold"> {carInfo?.name}</span>
+            </div>
             <h1
               className=" text-[18px]  text-center font-bold lg:text-[24px] antialiased
         md:text-[28px]"
