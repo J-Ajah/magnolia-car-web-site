@@ -4,13 +4,34 @@ import Head from "next/head";
 import { Navbar } from "@/components/common/Navbar";
 import { Layout } from "@/components/layouts/Layout";
 import type { AuthorPageProps } from "@/types/page-helper-types";
+import { useEffect, useState } from "react";
+import PageConstruction from "../common/PageConstruction";
 
 const Servicespage: NextPage<AuthorPageProps> = ({
   title,
   metadata,
   ...props
 }) => {
-  console.log("props", props);
+  const [navArea, setNavArea] = useState();
+  const [footer, setFooterArea] = useState();
+
+  useEffect(() => {
+    (async () => {
+      // Fetches the navigation bar and the footer
+      const navBar = await fetch(
+        "http://localhost:8080/magnoliaAuthor/.rest/delivery/pages/v1/homepage/navArea"
+      );
+
+      const navBarResponse = await navBar.json();
+      setNavArea(navBarResponse);
+
+      const footer = await fetch(
+        "http://localhost:8080/magnoliaAuthor/.rest/delivery/pages/v1/homepage/footer"
+      );
+      const footerResponse = await footer.json();
+      setFooterArea(footerResponse);
+    })();
+  }, []);
   return (
     <div className=" mr-auto ml-auto">
       <Head>
@@ -20,25 +41,23 @@ const Servicespage: NextPage<AuthorPageProps> = ({
 
       <Layout>
         <div className="Basic">
-          <h3>Services page has been Rendered</h3>
-          <section>
-            {props["navArea"] && (
-              <EditableArea key="Area" content={props["navArea"]} />
-            )}
+          <section className="navigationArea">
+            <div>
+              {navArea ? <EditableArea key="Area" content={navArea} /> : null}
+            </div>
           </section>
           {/* <Navbar /> */}
           <section>
+            <PageConstruction />
             {props["main"] && (
               <EditableArea key="Area" content={props["main"]} />
             )}
           </section>
 
           <section className="Footer">
-            <section>
-              {props["footer"] && (
-                <EditableArea key="Area" content={props["footer"]} />
-              )}
-            </section>
+            <div>
+              {footer ? <EditableArea key="Area" content={footer} /> : null}
+            </div>
           </section>
         </div>
       </Layout>

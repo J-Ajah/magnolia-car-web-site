@@ -77,13 +77,13 @@ export const Cars: React.FC<Props> = (props: Props) => {
       {showInfo && (
         <>
           <div
-            className="animate__animated animate__slideInDown w-[40px] h-[40px] absolute bottom-0 top-[38%]  ml-[47%]
+            className="animate__animated animate__zoomIn w-[40px] h-[40px] absolute bottom-0 top-[38%]  ml-[55%]
           translate-x-[-100%] border-2 rounded-full bg-[white]"
           >
             <FaCar className="text-[#c72b2b] mx-auto  w-[22px] h-[22px] translate-y-[30%]" />
           </div>
           <div
-            className={`animate__animated animate__slideInUp bg-[#ca2415]   text-white h-[80px] absolute w-full bottom-0
+            className={`animate__animated animate__zoomIn bg-[#ca2415]   text-white h-[80px] absolute w-full bottom-0
            lg:h-[${itemWidth.toString() === "20%" ? "50px" : "80px"}]`}
             onClick={sendData}
           >
