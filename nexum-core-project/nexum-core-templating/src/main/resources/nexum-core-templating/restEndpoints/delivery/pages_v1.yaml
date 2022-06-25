@@ -69,7 +69,7 @@ references:
     propertyName: instagramImg
     referenceResolver:
       class: info.magnolia.rest.reference.dam.AssetReferenceResolverDefinition
-
+#pages resolver
   - name: linkedPage
     propertyName: linkedPage
     referenceResolver:
