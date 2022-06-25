@@ -9,7 +9,7 @@ import PageConstruction from "../common/PageConstruction";
 
 export const Aboutpage: NextPage<AuthorPageProps> = ({
   title,
-  metadata,
+  //   metadata,
   ...props
 }) => {
   const [navArea, setNavArea] = useState();
@@ -25,6 +25,7 @@ export const Aboutpage: NextPage<AuthorPageProps> = ({
       const navBarResponse = await navBar.json();
       setNavArea(navBarResponse);
 
+      // fetches the footer for the page
       const footer = await fetch(
         "http://localhost:8080/magnoliaAuthor/.rest/delivery/pages/v1/homepage/footer"
       );
@@ -49,6 +50,8 @@ export const Aboutpage: NextPage<AuthorPageProps> = ({
           </section>
 
           <section>
+
+
             <PageConstruction />
             {props["main"] && (
               <EditableArea key="Area" content={props["main"]} />
@@ -65,15 +68,3 @@ export const Aboutpage: NextPage<AuthorPageProps> = ({
     </div>
   );
 };
-
-export async function getServerSideProps(context) {
-  console.log("I have been called");
-  const navBar = await fetch(
-    "http://localhost:8080/magnoliaAuthor/.rest/delivery/pages/v1/homepage/navArea"
-  );
-  const response = await navBar.json();
-  console.log("About page has been called: ", response?.navArea);
-  return {
-    props: response?.navArea, // will be passed to the page component as props
-  };
-}
