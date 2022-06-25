@@ -18,31 +18,21 @@ function classNames(...classes: string[]) {
 export const Navbar: React.FC<Props> = (props) => {
   const route = useRouter();
   let path = route.asPath;
+  console.log(path)
   let activePage = setCurrentPage(path);
-  console.log(props)
-  
 
   const navLinks: Array<Object> = Array(props.navLinksArea);
-  const links = [];
+  console.log(props.navLinksArea);
+  let links = [];
 
   // IIFE Gets the navLinks for mobile display
   (() => {
-    const navLinkValues = Object.entries(navLinks["0"]).map(
-      ([_key, value], _index) => {
-        return value.navPagesLink;
-      }
-    );
-  
-
-    navLinkValues.forEach((value) => {
-      if (typeof value === "string") {
-        links.push(value);
-      }
+    // Returns the links of each individual page to the links array
+    links = props?.navLinksArea["@nodes"].map((val: string) => {
+      return props?.navLinksArea[val];
     });
   })();
   // IIFE Ends here
-
-  console.log(Object.keys(props?.["logoArea"]).length > 0)
 
   return (
     <Disclosure as="nav" className="bg-gray-100 border-2 border-gray-200">
@@ -97,21 +87,26 @@ export const Navbar: React.FC<Props> = (props) => {
 
           <Disclosure.Panel className="md:hidden">
             <div className="px-6 pt-2 pb-3 space-y-1">
-              {links.map((item, key) => (
-                <Disclosure.Button
-                  key={key}
-                  as="a"
-                  href={item}
-                  className={`block px-3 py-2 rounded-md text-base font-medium 
+              {links.map((item: any, key) => {
+                console.log(activePage);
+                return (
+                  <Disclosure.Button
+                    key={key}
+                    as="a"
+                    href={item?.linkedPage}
+                    className={`block px-3 py-2 rounded-md text-base font-medium 
                    ${
-                     activePage === item.toLowerCase()
+                     activePage.toLowerCase() ===
+                       item?.navPagesLink.toLowerCase() ||
+                     item?.navPagesLink.toLowerCase().includes(activePage)
                        ? "text-[#d6293a]"
                        : "text-black hover:bg-white hover:text-gray"
                    }`}
-                >
-                  {item}
-                </Disclosure.Button>
-              ))}
+                  >
+                    {item?.navPagesLink}
+                  </Disclosure.Button>
+                );
+              })}
             </div>
           </Disclosure.Panel>
         </>

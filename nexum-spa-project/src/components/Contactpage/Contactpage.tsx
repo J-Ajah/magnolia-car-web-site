@@ -49,14 +49,14 @@ const Contactpage: NextPage<AuthorPageProps> = ({
           </section>
 
           <section>
-          <PageConstruction />
+            <PageConstruction />
             {props["main"] && (
               <EditableArea key="Area" content={props["main"]} />
             )}
           </section>
 
           <section className="Footer">
-            <div>
+            <div className="py-[2px]">
               {footer ? <EditableArea key="Area" content={footer} /> : null}
             </div>
           </section>

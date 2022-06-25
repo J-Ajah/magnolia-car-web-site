@@ -17,7 +17,7 @@ const NavLinks: React.FC<Props> = (props) => {
 
   function classNames(currentPath: string) {
     let current =
-    currentPath === pagePath
+      currentPath === pagePath || pagePath.includes(currentPath)
         ? "bg-gray-100 text-[#d6293a]"
         : "text-black hover:bg-white hover:text-gray";
 

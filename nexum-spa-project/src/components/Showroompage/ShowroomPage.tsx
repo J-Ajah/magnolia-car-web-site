@@ -53,8 +53,8 @@ const Showroompage: NextPage<AuthorPageProps> = ({
             )}
           </section>
 
-          <section className="Footer">
-            <div>
+          <section className="Footer ">
+            <div className="py-[2px]">
               {footer ? <EditableArea key="Area" content={footer} /> : null}
             </div>
           </section>

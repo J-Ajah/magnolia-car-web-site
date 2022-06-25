@@ -55,7 +55,7 @@ const Servicespage: NextPage<AuthorPageProps> = ({
           </section>
 
           <section className="Footer">
-            <div>
+            <div className="py-[2px]">
               {footer ? <EditableArea key="Area" content={footer} /> : null}
             </div>
           </section>

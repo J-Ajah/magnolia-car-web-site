@@ -11,6 +11,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
+import Link from "next/link";
 interface carInfo {
   images?: [];
   name?: string;
@@ -134,7 +135,9 @@ const Details = () => {
       lg:mt-0 lg:pb-5"
           >
             <div className="font-semibold cursor-pointer antialiased">
-              Homepage{" "}
+              <Link href="/homepage">
+                <a>Homepage </a>
+              </Link>
               <span>
                 {" "}
                 <span className="font-normal">/</span>{" "}

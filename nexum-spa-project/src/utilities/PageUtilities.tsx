@@ -3,8 +3,14 @@ import { useEffect, useRef } from "react";
 export const setCurrentPage = (path): string => {
   switch (path) {
     case "/":
+    case "/home":
+      path= "homepage";
+      break;
     case "/homepage":
       path = "home";
+      break;
+    case "/about":
+      path = "about";
       break;
     case "/homepage/about":
       path = "about";
