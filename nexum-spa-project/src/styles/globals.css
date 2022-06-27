@@ -70,6 +70,14 @@ body {
   z-index: 1;
 }
 
+.aboutBanner-container{
+  position: relative;
+  background-image: url(/img/AboutBg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
 .hide {
   visibility: hidden;
 }

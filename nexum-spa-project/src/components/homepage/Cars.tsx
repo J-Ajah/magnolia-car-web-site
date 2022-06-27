@@ -62,7 +62,7 @@ export const Cars: React.FC<Props> = (props: Props) => {
   return (
     <div
       className={
-        "car relative w-[100%] md:w-[50%] " +
+        "car relative hover:shadow-xl  brightness-95 hover:brightness-105 w-[100%] md:w-[50%] " +
         (itemWidth === "25%" ? "lg:w-[25%] " : "") +
         (itemWidth === "20%" ? "lg:w-[20%] " : "") +
         (itemWidth === "33%" ? "lg:w-[33%] " : "") +
@@ -73,7 +73,7 @@ export const Cars: React.FC<Props> = (props: Props) => {
       onMouseEnter={() => setShowInfo(true)}
       onMouseLeave={() => setShowInfo(false)}
     >
-      <img src={imageUrl} alt={props.carName} onClick={sendData} />
+      <img className="w-full h-[220px] lg:h-[260px]" src={imageUrl} alt={props.carName} onClick={sendData} />
       {showInfo && (
         <>
           <div
@@ -83,7 +83,7 @@ export const Cars: React.FC<Props> = (props: Props) => {
             <FaCar className="text-[#c72b2b] mx-auto  w-[22px] h-[22px] translate-y-[30%]" />
           </div>
           <div
-            className={`animate__animated animate__zoomIn bg-[#ca2415]   text-white h-[80px] absolute w-full bottom-0
+            className={`bg-[#ca2415]  text-white h-[80px] absolute w-full bottom-0
            lg:h-[${itemWidth.toString() === "20%" ? "50px" : "80px"}]`}
             onClick={sendData}
           >

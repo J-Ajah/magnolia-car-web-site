@@ -1,13 +1,7 @@
 import { EditableArea } from "@magnolia/react-editor";
-import Link from "next/link";
 
 type Props = {
-  // icons?: {};
-  // data?: {
-  //   facebookImg?: {};
-  //   twitterImg?: {};
-  //   instagramImg?: {};
-  // };
+ 
   content?: {
     privacyTermsArea?: {};
     rightArea?: {};
@@ -15,7 +9,7 @@ type Props = {
   };
 };
 const footerCopyright: React.FC<Props> = ({ content }) => {
-  const hostUrl = process.env["NEXT_PUBLIC_MGNL_HOST"];
+
 
   const { socialIconsArea, rightArea, privacyTermsArea } = content;
   let isPageEditable: boolean;
