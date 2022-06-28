@@ -1,3 +1,3 @@
-type Props = {}
+type Props = {};
 
-export const Layout: React.FC<Props> = ({ children }) => <div>{children}</div>
+export const Layout: React.FC<Props> = ({ children }) => <div>{children}</div>;

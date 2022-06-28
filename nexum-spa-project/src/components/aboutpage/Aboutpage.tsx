@@ -58,7 +58,7 @@ export const Aboutpage: NextPage<AuthorPageProps> = ({
               <div
                 className="about-Information relative space-y-3 z-30 
               md:mt-5 md:w-[50%] md:border-[1.5px] md:rounded-xl md:pl-5
-              lg:w-[430px] lg:h-[250px] lg:left-[6%] lg:top-5  lg:backdrop-blur-md  lg:border-l-4 lg:border-[tomato]
+              lg:w-[430px] lg:h-[250px] lg:left-[6%] lg:top-5  lg:backdrop-blur-md  lg:border-l-4 lg:border-[#d6293a]
               lg:border-0 lg:shadow-md  xl:left-[11%] xl:top-10
               "
               >
@@ -99,71 +99,107 @@ export const Aboutpage: NextPage<AuthorPageProps> = ({
           <section className="bg-[#f7f7f7] p-8">
             <div className="core-values space-y-4">
               <div className="values">
-                <p className="text-[14px] font-semibold text-[black] border-b-2 border-[#d6293a] w-[10%] mx-auto">
+                <p
+                  className="text-[14px] font-semibold text-[black] border-b-2 border-[#d6293a] w-[10%] mx-auto
+                md:w-[30px]"
+                >
                   {" "}
                   OUR{" "}
                 </p>
-                <div className="text-[18px] font-semibold text-[black]   w-[17%] mx-auto">
+                <div
+                  className="text-[18px] font-semibold text-[black]   w-[17%] mx-auto
+                md:w-[55px]"
+                >
                   Values
                 </div>
 
-                <div className="values-container border-r-4 border-[#d6293a] mt-5 rounded p-3">
-                  <div className="value-item flex space-x-4">
-                    <img
-                      src="/img/Handshake.svg"
-                      className="w-[120px]"
-                      alt=""
-                    />
-                    <div className="text-black">
-                      <p className="font-bold text-xl  ">Commitment</p>
-                      <p className="font-semibold">
-                        Our commitment to our work and our clients is an
-                        unbreakable bond.
-                      </p>
+                <div className="values-container md:grid grid-cols-2  gap-4 pr-10 pl-10 xl:justify-items-center">
+                  <div
+                    className=" border-r-4 border-[#d6293a] mt-5 rounded p-3
+                  md:border-r-0 md:border-l-4 lg:shadow-sm xl:w-[500px] xl:p-7"
+                  >
+                    <div className="value-item flex space-x-4">
+                      <img
+                        src="/img/Handshake.svg"
+                        className="w-[120px] lg:w-[50px] xl:w-[70px]"
+                        alt=""
+                      />
+                      <div className="text-black">
+                        <p className="font-bold text-[16px] lg:text-[19px] ">
+                          Commitment
+                        </p>
+                        <p className="font-semibold">
+                          Our commitment to our work and our clients is an
+                          unbreakable bond.
+                        </p>
+                      </div>
                     </div>
                   </div>
-                </div>
 
-                <div className="values-container border-l-4 border-[#d6293a] mt-5 rounded p-3">
-                  <div className="value-item flex space-x-4">
-                    <img src="/img/passion.svg" className="w-[120px]" alt="" />
-                    <div className="text-black">
-                      <p className="font-bold text-xl  ">Passion</p>
-                      <p className="font-semibold">
-                        Passion motivates us to better and progress effectively.
-                        Making stronger the bond that exists between us and our
-                        customers.
-                      </p>
+                  <div
+                    className=" border-l-4 border-[#d6293a] mt-5 rounded p-3
+                  md:border-l-0 md:border-r-4 lg:shadow-sm  xl:w-[500px] xl:p-7"
+                  >
+                    <div className="value-item flex space-x-4">
+                      <img
+                        src="/img/passion.svg"
+                        className="w-[120px] lg:w-[50px] xl:w-[70px]"
+                        alt=""
+                      />
+                      <div className="text-black">
+                        <p className="font-bold text-[16px] lg:text-[19px]">
+                          Passion
+                        </p>
+                        <p className="font-semibold">
+                          Passion motivates us to better and progress
+                          effectively. Making stronger the bond that exists
+                          between us and our customers.
+                        </p>
+                      </div>
                     </div>
                   </div>
-                </div>
 
-                <div className="values-container border-r-4 border-[#d6293a] mt-5 rounded p-3">
-                  <div className="value-item flex space-x-4">
-                    <img
-                      src="/img/Handshake.svg"
-                      className="w-[120px]"
-                      alt=""
-                    />
-                    <div className="text-black">
-                      <p className="font-bold text-xl  ">Integrity</p>
-                      <p className="font-semibold">
-                        Honesty is one of our principal, which helps us meet our
-                        required expectation.
-                      </p>
+                  <div
+                    className=" border-r-4 border-[#d6293a] mt-5 rounded p-3
+                  md:border-r-0 md:border-l-4 lg:shadow-sm  xl:w-[500px] xl:p-7 xl:border-l-4"
+                  >
+                    <div className="value-item flex space-x-4">
+                      <img
+                        src="/img/learningImg.svg"
+                        className="w-[120px] lg:w-[40px] xl:w-[70px]"
+                        alt=""
+                      />
+                      <div className="text-black">
+                        <p className="font-bold text-[16px] lg:text-[19px]">
+                          Learning
+                        </p>
+                        <p className="font-semibold">
+                          We are always striving to improve our services so as
+                          to serve our customers more better
+                        </p>
+                      </div>
                     </div>
                   </div>
-                </div>
 
-                <div className="values-container border-l-4 border-[#d6293a] mt-5 rounded p-3">
-                  <div className="value-item flex space-x-4">
-                    <img src="/img/learning.svg" className="w-[120px]" alt="" />
-                    <div className="text-black">
-                      <p className="font-bold text-xl  ">Learning</p>
-                      <p className="font-semibold">
-                        We are always striving to improve our services so as to
-                        serve our customers more better
-                      </p>
+                  <div
+                    className=" border-l-4 border-[#d6293a] mt-5 rounded p-3
+                  md:border-r-0 md:border-r-4 lg:shadow-sm  xl:w-[500px] xl:p-7 xl:border-l-0"
+                  >
+                    <div className="value-item flex space-x-4">
+                      <img
+                        src="/img/Handshake.svg"
+                        className="w-[120px] lg:w-[50px] xl:w-[70px]"
+                        alt=""
+                      />
+                      <div className="text-black">
+                        <p className="font-bold text-[16px] lg:text-[19px]">
+                          Integrity
+                        </p>
+                        <p className="font-semibold">
+                          Honesty is one of our principal, which helps us meet
+                          our required expectation.
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>

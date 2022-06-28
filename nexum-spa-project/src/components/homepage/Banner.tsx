@@ -16,11 +16,12 @@ type Props = {
 };
 
 export const Banner: React.FC<Props> = (props: Props) => {
-
-
   return (
     <>
-      <Carousel data={props} />
+       <div className="">
+        <Carousel data={props} />
+       </div>
+
     </>
   );
 };

@@ -70,16 +70,25 @@ body {
   z-index: 1;
 }
 
-.aboutBanner-container{
+.aboutBanner-container {
   position: relative;
   background-image: url(/img/AboutBg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-
 .hide {
   visibility: hidden;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+.sticky + .page-container {
+  padding-top: 60px;
 }
 
 .swiper-button-prev,

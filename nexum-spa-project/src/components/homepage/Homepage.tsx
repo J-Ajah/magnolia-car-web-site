@@ -8,6 +8,7 @@ import type { AuthorPageProps } from "@/types/page-helper-types";
 import FooterCopyright from "../common/FooterCopyright";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import SideNav from "../common/SideNav";
 
 // Dynamic import of the scroll component
 const Scroll = dynamic(
@@ -41,25 +42,31 @@ export const Homepage: NextPage<AuthorPageProps> = ({
               <EditableArea key="Area" content={props["navArea"]} />
             )}
           </section>
-          <section>
-            {props["main"] && (
-              <EditableArea key="Area" content={props["main"]} />
-            )}
-          </section>
 
-          <section className="Footer mt-20 relative lg:pt-[30px] ">
-            {props["footer"] && (
-              <EditableArea
-                className="pt-1"
-                key="Area"
-                content={props["footer"]}
-              />
-            )}
-            {/* Copyright Area  */}
-            {props["rightArea"] && (
-              <FooterCopyright key="rightArea" content={areaTypes} />
-            )}
-          </section>
+          <div className="page-container flex relative ">
+             <SideNav />
+            <div className="page-content">
+              <section className="">
+                {props["main"] && (
+                  <EditableArea key="Area" content={props["main"]} />
+                )}
+              </section>
+
+              <section className="Footer mt-20 relative lg:pt-[30px] ">
+                {props["footer"] && (
+                  <EditableArea
+                    className="pt-1"
+                    key="Area"
+                    content={props["footer"]}
+                  />
+                )}
+                {/* Copyright Area  */}
+                {props["rightArea"] && (
+                  <FooterCopyright key="rightArea" content={areaTypes} />
+                )}
+              </section>
+            </div>
+          </div>
         </div>
 
         <img
