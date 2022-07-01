@@ -7,14 +7,13 @@
     @apply md:w-[60%] lg:w-[70%]  relative;
   }
 
-  /* .car-container > div{
-        @apply  md:flex;
-    } */
-
-  .me > .mgnlEditor {
+  .me > .mgnlEditor, .car-container  > .mgnlEditor{
     @apply w-[100%];
   }
 
+  .car-container  {
+    @apply justify-center;
+  }
   /* Footer Area Magnolia Styling */
   .footerArea > .mgnlEditor {
     @apply w-[100%];

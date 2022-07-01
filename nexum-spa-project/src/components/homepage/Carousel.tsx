@@ -80,7 +80,7 @@ export const Carousel: React.FC<Props> = ({ data }) => {
   }, []);
 
   return (
-    <div className="border-2 w-[100%]">
+    <div className="w-[100%]">
       <div className="carousel w-full h-full">
         <div
           id="item1"

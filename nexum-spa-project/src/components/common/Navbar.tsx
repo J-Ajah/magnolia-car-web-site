@@ -35,7 +35,7 @@ export const Navbar: React.FC<Props> = (props) => {
   // IIFE Ends here
 
   return (
-    <Disclosure as="nav" className="bg-gray-100 border-2 border-gray-200">
+    <Disclosure as="nav" className="bg-gray-100">
       {({ open }) => (
         <>
           <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-0 border-2 border-gray-200">

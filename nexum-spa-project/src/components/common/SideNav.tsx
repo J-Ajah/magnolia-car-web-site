@@ -3,12 +3,12 @@ import { AiFillCaretRight } from "react-icons/ai";
 
 const SideNav = () => {
   return (
-    <div className="sideNav bg-gray-100 !w-[370px]  h-[100vh]  top-[20px] z-30 pt-5">
-      <div className="text-center mb-1 text-[16px] font-semibold tracking-wide antialiased">
+    <div className="sideNav bg-[#F3F4F6] !w-[400px]  h-[100vh]  top-[20px] z-30 pt-5">
+      <div className="text-center mb-1 text-[16px] font-bold  tracking-wider antialiased">
         Car sections
       </div>
 
-      <div className="border-1 border-[#e9e7e7] h-[100vh] pl-2">
+      <div className="border-1 border-[#e9e7e7] h-[100vh] pl-4 space-y-3 ">
         <div className="text-left  border-[#f0efef] p-1 rounded  cursor-pointer  flex ">
           <AiFillCaretRight  className="mt-1"/> <p>Toyota</p>
         </div>

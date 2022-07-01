@@ -2,7 +2,7 @@ window.onscroll = function () {
   const element = document.querySelector(".to-top");
   const sideNav = (document.querySelector(".sideNav") as HTMLElement) || null;
 
-  let sideNavPosition: number = Math.ceil(sideNav.getBoundingClientRect().top);
+  let sideNavPosition: number = Math?.ceil(sideNav?.getBoundingClientRect().top);
   let windowPageOffset = Math.ceil(window.pageYOffset);
 
   // Makes the NAVBAR position fixed
@@ -28,8 +28,8 @@ const makeNavFixed = (
   e: HTMLElement
 ) => {
   if (navPosition <= 0 && windowPageOffset > 80) {
-    return e.classList.add("sticky");
+    return e?.classList.add("sticky");
   }
 
-  return e.classList.remove("sticky");
+  return e?.classList.remove("sticky");
 };

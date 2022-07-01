@@ -58,16 +58,19 @@ export const Cars: React.FC<Props> = (props: Props) => {
       `homepage/details?${props.carName}`
     );
   };
-
+ console.log(itemWidth);
   return (
     <div
       className={
         "car relative hover:shadow-xl  brightness-95 hover:brightness-105 w-[100%] md:w-[50%] " +
+
+        (itemWidth === "100%" ? "md:w-[90%] ml-7 " : "") +
         (itemWidth === "25%" ? "lg:w-[25%] " : "") +
         (itemWidth === "20%" ? "lg:w-[20%] " : "") +
         (itemWidth === "33%" ? "lg:w-[33%] " : "") +
         (itemWidth === "50%" ? "lg:w-[50%]" : "") +
         (itemWidth < "25%" ? "lg:w-[25%]" : "") +
+        (itemWidth === "100%" ? "lg:w-[90%] ml-7 rounded-xl " : "") +
         " lg:border-2 cursor-pointer hover:transition-all"
       }
       onMouseEnter={() => setShowInfo(true)}
