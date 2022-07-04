@@ -1,36 +1,31 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { AiFillCaretRight } from "react-icons/ai";
+import { EditableArea } from "@magnolia/react-editor";
+import Scroll from "./Scroll";
+import HoriLine from "./HoriLine";
 
-const SideNav = () => {
+type Props = {
+  sideNavigationTitle: string;
+};
+
+const SideNav: React.FC<Props> = (props) => {
   return (
-    <div className="sideNav bg-[#F3F4F6] !w-[400px]  h-[100vh]  top-[20px] z-30 pt-5">
+    <div className="sideNav bg-[#F3F4F6] !w-[200px] border-t-2  h-[100vh]  top-[20px] z-30 pt-5">
       <div className="text-center mb-1 text-[16px] font-bold  tracking-wider antialiased">
-        Car sections
+        {props.sideNavigationTitle}
+        <HoriLine />
       </div>
 
-      <div className="border-1 border-[#e9e7e7] h-[100vh] pl-4 space-y-3 ">
-        <div className="text-left  border-[#f0efef] p-1 rounded  cursor-pointer  flex ">
-          <AiFillCaretRight  className="mt-1"/> <p>Toyota</p>
-        </div>
-        <div className="text-left  border-[#f0efef] p-1 rounded  cursor-pointer  flex">
-          <AiFillCaretRight  className="mt-1"/> <p>Benz</p>
-        </div>
-        <div className="text-left  border-[#f0efef] p-1 rounded  cursor-pointer  flex">
-          <AiFillCaretRight  className="mt-1"/> <p>Honda</p>
-        </div>
-        <div className="text-left  border-[#f0efef] p-1 rounded  cursor-pointer  flex">
-          <AiFillCaretRight  className="mt-1"/> <p>ISUZU </p>
-        </div>
-        <div className="text-left  border-[#f0efef] p-1 rounded  cursor-pointer  flex">
-          <AiFillCaretRight  className="mt-1"/> <p> Infinity</p>
-        </div>
-        <div className="text-left  border-[#f0efef] p-1 rounded  cursor-pointer  flex">
-          <AiFillCaretRight  className="mt-1"/> <p> GMC </p>
-        </div>
-        <div className="text-left  border-[#f0efef] p-1 rounded  cursor-pointer  flex">
-          <AiFillCaretRight  className="mt-1"/> <p> HYUNDAI </p>
-        </div>
+      <div className="border-1 border-[#e9e7e7] h-[100vh]  space-y-3 ">
+        {props["navLinks"] && (
+          <EditableArea
+            className="navLinks flex flex-wrap"
+            key="navLinks"
+            content={props["navLinks"]}
+          />
+        )}
       </div>
+      <Scroll />
     </div>
   );
 };

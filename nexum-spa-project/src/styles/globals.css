@@ -42,7 +42,13 @@
   .car > .mgnlEditor {
     /* @apply z-50 pointer-events-none; */
   }
+
+  .navLinks >.mgnlEditor, .sidebarContainer > .mgnlEditor{
+    @apply w-[100%] z-30;
+
+  }
 }
+
 
 :root {
   --swiper-navigation-size: 44px !important;

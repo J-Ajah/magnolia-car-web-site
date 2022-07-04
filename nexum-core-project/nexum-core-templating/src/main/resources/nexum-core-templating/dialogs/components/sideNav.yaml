@@ -1,0 +1,9 @@
+label: Side Navigation Link
+
+form:
+  properties:
+    sideNavigationLink:
+      label: Link
+      $type: textField
+      required: true
+

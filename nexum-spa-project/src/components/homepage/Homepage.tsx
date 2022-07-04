@@ -24,7 +24,7 @@ export const Homepage: NextPage<AuthorPageProps> = ({
   ...props
 }) => {
   const areaTypes: Object = props;
-  console.log("Homepage navArea has been logged", props["navArea"]);
+  // console.log("Homepage sideNavArea has been logged", props["navArea"]);
 
   return (
     <div className="page-container relative mr-auto ml-auto">
@@ -44,7 +44,13 @@ export const Homepage: NextPage<AuthorPageProps> = ({
           </section>
 
           <div className="page-container flex relative ">
-             <SideNav />
+            {/* <SideNav /> */}
+
+            {props["sideNavArea"] && (
+              <EditableArea className="sidebarContainer w-[200px]" key="SideNavArea" content={props["sideNavArea"]} />
+            )}
+            {/* Side nav bar area ends here */}
+
             <div className="page-content">
               <section className="">
                 {props["main"] && (

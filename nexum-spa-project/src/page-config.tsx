@@ -17,14 +17,15 @@ import { LinkDetails } from "./components/common/LinkDetails";
 import { FooterPosts } from "./components/common/FooterPosts";
 import { FooterSubscribe } from "./components/common/FooterSubscribe";
 import Posts from "./components/common/Posts";
-import Servicespage from "./components/servicespage/Servicespage";
-import Showroompage from "./components/showroompage/ShowroomPage";
-import Contactpage from "./components/contactpage/Contactpage";
+import Servicespage from "./components/Servicespage/Servicespage";
+import Showroompage from "./components/Showroompage/ShowroomPage";
+import Contactpage from "./components/Contactpage/Contactpage";
 import PrivacyTerms from "./components/common/PrivacyTerms";
 import SocialIcons from "./components/common/SocialIcons";
 import Copyright from "./components/common/Copyright";
 import Details from "./components/details/Details";
-// import FooterCopyright from "./components/common/FooterCopyright";
+import SideNav from "./components/common/SideNav";
+import SideLink from "@/components/common/sideLink";
 
 export const config = {
   componentMappings: {
@@ -51,6 +52,8 @@ export const config = {
     "nexum-core-templating:components/common/socialIcons":
       SocialIcons as React.FC,
     "nexum-core-templating:components/common/copyright": Copyright as React.FC,
+    "nexum-core-templating:components/common/sideNav": SideNav as React.FC,
+    "nexum-core-templating:components/common/sideLink": SideLink as React.FC,
 
     // // pages
     "nexum-core-templating:pages/home": Homepage as React.FC,
@@ -59,6 +62,5 @@ export const config = {
     "nexum-core-templating:pages/showroom": Showroompage as React.FC,
     "nexum-core-templating:pages/contactUs": Contactpage as React.FC,
     "nexum-core-templating:pages/details": Details as React.FC,
-
   },
 };

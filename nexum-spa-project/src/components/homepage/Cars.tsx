@@ -58,7 +58,6 @@ export const Cars: React.FC<Props> = (props: Props) => {
       `homepage/details?${props.carName}`
     );
   };
- console.log(itemWidth);
   return (
     <div
       className={
